@@ -7,6 +7,11 @@ app.use(map);
 app.use(patterns);
 app.use(photos);
 
+//  Add new map icon
+map.createIcon("producer", {'iconUrl': config.router.base_url.concat("/images/producer.png"), 'iconSize': [30, 30]});
+map.createIcon("salepoint", {'iconUrl': config.router.base_url.concat("/images/salepoint.png"), 'iconSize': [30, 30]});
+map.createIcon("storagepoint", {'iconUrl': config.router.base_url.concat("/images/storagepoint.png"), 'iconSize': [30, 30]});
+
 config.presync = presync;
 config.postsync = postsync;
 var ready = app.init(config).then(function() {
