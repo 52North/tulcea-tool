@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{label}}</title>
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        {{>home}}
+        <h1>{{label}}</h1>
+        {{#page_config.can_change}}
+        <a href="{{rt}}/consumers/{{id}}/edit" data-icon="edit" data-transition="flip">
+          Edit
+        </a>
+        {{/page_config.can_change}}
+      </div>
+      <div role="main" class="ui-content">
+          <h1>{{label}}</h1>
+          <table>
+            <tr>
+              <th>Gender</th>
+              <td>{{gender}}</td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td>{{age_label}}</td>
+            </tr>
+            <tr>
+              <th>Income (Euro)</th>
+              <td>{{income_label}}</td>
+            </tr>
+            <tr>
+              <th>Big store chains</th>
+              <td>{{big_chain_store_label}}</td>
+            </tr>
+            <tr>
+              <th>Local chain stores</th>
+              <td>{{local_chain_store_label}}</td>
+            </tr>
+            <tr>
+              <th>Small shops</th>
+              <td>{{small_shop_label}}</td>
+            </tr>
+            <tr>
+              <th>Market</th>
+              <td>{{market_label}}</td>
+            </tr>
+            <tr>
+              <th>Main transport</th>
+              <td>{{transport_label}}</td>
+            </tr>
+            <tr>
+              <th>Bio products use</th>
+              <td>{{bio_label}}</td>
+            </tr>
+            <tr>
+              <th>Local/national products use</th>
+              <td>{{local_label}}</td>
+            </tr>
+            <tr>
+              <th>Quantity of consumed tap water (in m³)</th>
+              <td>{{tap_water_quantity}}</td>
+            </tr>
+            <tr>
+              <th>Quantity of consumed bottled water (in m³)</th>
+              <td>{{bottled_water_quantity}}</td>
+            </tr>
+            <tr>
+              <th>Waste water</th>
+              <td>{{waste_water_label}}</td>
+            </tr>
+            <tr>
+              <th>Priorization in food choice</th>
+              <td>{{priorization_label}}</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} producer</title>
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        {{>home}}
+        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} producer</h1>
+        {{#id}}
+        {{#page_config.can_delete}}
+        <form action="{{svc}}/producers/{{id}}" method="post" data-ajax="false"
+          data-wq-json="true" data-wq-background-sync="false"
+          onsubmit="return require('wq/app').confirmSubmit(this, 'Are you sure you want to delete this record?');">
+          {{>csrf}}
+          <input type=hidden name="_method" value="DELETE">
+          <button type="submit" data-icon="delete" class="ui-btn-right">
+            Delete
+          </button>
+        </form>
+        {{/page_config.can_delete}}
+        {{/id}}
+      </div>
+      <div role="main" class="ui-content">
+        <form action="{{svc}}/producers/{{id}}" method="post" data-ajax="false"
+            data-wq-json="true"
+            {{#outbox_id}}
+              data-wq-outbox-id="{{outbox_id}}"
+              data-wq-outbox-preserve=""
+            {{/outbox_id}}>
+          {{>csrf}}
+          {{#id}}
+          <input type=hidden name="_method" value="PUT">
+          {{/id}}
+          <ul data-role="listview" data-inset="true">
+            <li class="ui-field-contain">
+              <label for='producer-name'>Name</label>
+              <input id='producer-name' type='text' data-xform-type='string' name='name' value="{{name}}">
+              <p class='error producer-name-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Type</legend>
+                {{#type_choices}}
+                <input type='radio' id='producer-type-{{name}}' name='type' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-type-{{name}}'>{{label}}</label>
+                {{/type_choices}}
+              </fieldset>
+              <p class='error producer-type-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-product'>Main product(s)</label>
+              <input id='producer-product' type='text' data-xform-type='string' name='product' value="{{product}}">
+              <p class='error producer-product-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-address'>Address</label>
+              <input id='producer-address' type='text' data-xform-type='string' name='address' value="{{address}}">
+              <p class='error producer-address-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-phone'>Telephone</label>
+              <input id='producer-phone' type='text' data-xform-type='string' name='phone' value="{{phone}}">
+              <p class='error producer-phone-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-email'>E-mail</label>
+              <input id='producer-email' type='text' data-xform-type='string' name='email' value="{{email}}">
+              <p class='error producer-email-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-website'>Website</label>
+              <input id='producer-website' type='text' data-xform-type='string' name='website' value="{{website}}">
+              <p class='error producer-website-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Location Mode</legend>
+                {{#toggle_choices}}
+                <input type='radio' id='producer-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-toggle-{{name}}'>{{label}}</label>
+                {{/toggle_choices}}
+              </fieldset>
+              <p class='error producer-toggle-errors'></p>
+            </li>
+            <li>
+              <label for='producer-geometry'>Location</label>
+              <input type='hidden' data-xform-type='geopoint' name='geometry'>
+              <div class="map edit-map" id='producer-{{id}}{{^id}}new{{/id}}-edit-map'></div>
+              <p class='error producer-geometry-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-latitude'>Latitude</label>
+              <input id='producer-latitude' type='number' data-xform-type='decimal' name='latitude' step='0.001' value="{{latitude}}">
+              <p class='error producer-latitude-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-longitude'>Longitude</label>
+              <input id='producer-longitude' type='number' data-xform-type='decimal' name='longitude' step='0.001' value="{{longitude}}">
+              <p class='error producer-longitude-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-accuracy'>GPS Accuracy</label>
+              <input id='producer-accuracy' type='number' data-xform-type='decimal' name='accuracy' step='0.001' value="{{accuracy}}">
+              <p class='error producer-accuracy-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Do you use water for irrigation?</legend>
+                {{#irrigation_use_choices}}
+                <input type='radio' id='producer-irrigation_use-{{name}}' name='irrigation_use' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-irrigation_use-{{name}}'>{{label}}</label>
+                {{/irrigation_use_choices}}
+              </fieldset>
+              <p class='error producer-irrigation_use-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>If not, do you have interest?</legend>
+                {{#irrigation_interest_choices}}
+                <input type='radio' id='producer-irrigation_interest-{{name}}' name='irrigation_interest' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-irrigation_interest-{{name}}'>{{label}}</label>
+                {{/irrigation_interest_choices}}
+              </fieldset>
+              <p class='error producer-irrigation_interest-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-irrigation_quantity'>Quantity (in m³ per year)</label>
+              <input id='producer-irrigation_quantity' type='number' data-xform-type='decimal' name='irrigation_quantity' step='0.001' value="{{irrigation_quantity}}">
+              <p class='error producer-irrigation_quantity-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Water quality</legend>
+                {{#irrigation_quality_choices}}
+                <input type='radio' id='producer-irrigation_quality-{{name}}' name='irrigation_quality' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-irrigation_quality-{{name}}'>{{label}}</label>
+                {{/irrigation_quality_choices}}
+              </fieldset>
+              <p class='error producer-irrigation_quality-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-electrical_consumption'>Average electrical consumption (in kWh per year)</label>
+              <input id='producer-electrical_consumption' type='number' data-xform-type='decimal' name='electrical_consumption' step='0.001' value="{{electrical_consumption}}">
+              <p class='error producer-electrical_consumption-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-distance'>Distance: producer → storage → shop</label>
+              <input id='producer-distance' type='number' data-xform-type='decimal' name='distance' step='0.001' value="{{distance}}">
+              <p class='error producer-distance-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-production'>Production (in kg/ha per year)</label>
+              <input id='producer-production' type='number' data-xform-type='decimal' name='production' step='0.001' value="{{production}}">
+              <p class='error producer-production-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-surface'>Surface (in ha)</label>
+              <input id='producer-surface' type='number' data-xform-type='decimal' name='surface' step='0.001' value="{{surface}}">
+              <p class='error producer-surface-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Uses</legend>
+                {{#use_choices}}
+                <input type='radio' id='producer-use-{{name}}' name='use' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-use-{{name}}'>{{label}}</label>
+                {{/use_choices}}
+              </fieldset>
+              <p class='error producer-use-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Use of fertilizer</legend>
+                {{#fertilizer_choices}}
+                <input type='radio' id='producer-fertilizer-{{name}}' name='fertilizer' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='producer-fertilizer-{{name}}'>{{label}}</label>
+                {{/fertilizer_choices}}
+              </fieldset>
+              <p class='error producer-fertilizer-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-storagepoint_id'>Storage point</label>
+              <select id='producer-storagepoint_id' data-xform-type='string' name='storagepoint_id'>
+                <option value="">Select one...</option>
+                {{#storagepoint_list}}
+                <option value="{{id}}"{{#selected}} selected{{/selected}}>
+                 {{#outbox}}*{{/outbox}} {{label}}
+                </option>
+                {{/storagepoint_list}}
+              </select>
+              <p class='error producer-storagepoint_id-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='producer-salepoint_id'>Sale point</label>
+              <select id='producer-salepoint_id' data-xform-type='string' name='salepoint_id'>
+                <option value="">Select one...</option>
+                {{#salepoint_list}}
+                <option value="{{id}}"{{#selected}} selected{{/selected}}>
+                 {{#outbox}}*{{/outbox}} {{label}}
+                </option>
+                {{/salepoint_list}}
+              </select>
+              <p class='error producer-salepoint_id-errors'></p>
+            </li>
+            <li>
+              <div class="ui-grid-a">
+                <div class="ui-block-a">
+                  <a href="{{rt}}/producers/{{id}}" data-role="button" data-icon="back" data-direction="reverse">
+                    Back
+                  </a>
+                </div>
+                <div class="ui-block-b">
+                  <button type="submit" data-icon="check" data-theme="b">
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <p class="error producer-errors"></p>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
