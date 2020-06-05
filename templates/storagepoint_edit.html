@@ -75,7 +75,7 @@
                 <legend>Location Mode</legend>
                 {{#toggle_choices}}
                 <input type='radio' id='storagepoint-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
-                <label for='storagepoint-toggle-{{name}}'>{{label}}</label>
+                <label for='storagepoint-toggle-{{name}}'>{{{label}}}</label>
                 {{/toggle_choices}}
               </fieldset>
               <p class='error storagepoint-toggle-errors'></p>
