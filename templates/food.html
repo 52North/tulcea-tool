@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!--
+To make your application work offline using the old "application cache" standard,
+uncomment the manifest attribute below.  This is disabled by default because it
+isn't always needed and it makes debugging more tricky.
+See https://github.com/wq/wq.app/issues/63
+-->
+<html><!-- manifest="SlupskTool.appcache" -->
+  <head>
+    <title>Food</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page" class="ui-page">
+      <div data-role="header">
+        {{>home}}
+        <h1>Food</h1>
+      </div>
+      {{>navbar}}
+      <div role="main" class="ui-content justified">
+        <p>
+          On this site, you can find and submit information about food in and around Tulcea.
+        </p>
+        <ul data-role="listview" data-inset="true">
+          <li>
+            <a href="{{rt}}/salepoints/new" data-role="button" data-icon="plus">Add sale point</a>
+          </li>
+          <li>
+            <a href="{{rt}}/salepoints" data-role="button" data-icon="bars">List of sale points</a>
+          </li>
+          <li>
+            <a href="{{rt}}/storagepoints/new" data-role="button" data-icon="plus">Add storage point</a>
+          </li>
+          <li>
+            <a href="{{rt}}/storagepoints" data-role="button" data-icon="bars">List of storage points</a>
+          </li>
+          <li>
+            <a href="{{rt}}/producers/new" data-role="button" data-icon="plus">Add producer</a>
+          </li>
+          <li>
+            <a href="{{rt}}/producers" data-role="button" data-icon="bars">List of producers</a>
+          </li>
+        </ul>
+      </div>
+      {{>footer}}
+    </div>
+  </body>
+</html>

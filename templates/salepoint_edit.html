@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} salepoint</title>
+    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} sale point</title>
     {{>head}}
   </head>
   <body>
     <div data-role="page">
       <div data-role="header">
         {{>home}}
-        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} salepoint</h1>
+        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} sale point</h1>
         {{#id}}
         {{#page_config.can_delete}}
         <form action="{{svc}}/salepoints/{{id}}" method="post" data-ajax="false"
