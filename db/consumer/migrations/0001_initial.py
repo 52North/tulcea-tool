@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Consumer',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('gender', models.TextField(blank=True, null=True, verbose_name='Gender')),
+                ('gender', models.CharField(blank=True, choices=[('male', 'Male'), ('female', 'Female')], max_length=6, null=True, verbose_name='Gender')),
                 ('age', models.CharField(blank=True, choices=[('12_20', '12-20'), ('20_35', '20-35'), ('35_55', '35-55'), ('older_55', '55+')], max_length=8, null=True, verbose_name='Age')),
                 ('income', models.CharField(blank=True, choices=[('less_1500', '&lt; 1500 / family member'), ('more_1500', '&gt; 1500 / family member'), ('na', 'NA')], max_length=9, null=True, verbose_name='Income (Euro)')),
                 ('big_chain_store', models.CharField(blank=True, choices=[('1', '1'), ('3', 'ca. 3'), ('more', 'More')], max_length=4, null=True, verbose_name='Big store chains')),

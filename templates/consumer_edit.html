@@ -23,6 +23,7 @@
         {{/page_config.can_delete}}
         {{/id}}
       </div>
+      {{>navbar}}
       <div role="main" class="ui-content">
         <form action="{{svc}}/consumers/{{id}}" method="post" data-ajax="false"
             data-wq-json="true"
@@ -35,9 +36,15 @@
           <input type=hidden name="_method" value="PUT">
           {{/id}}
           <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">1) General</li>
             <li class="ui-field-contain">
-              <label for='consumer-gender'>Gender</label>
-              <input id='consumer-gender' type='text' data-xform-type='string' name='gender' value="{{gender}}">
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>Gender</legend>
+                {{#gender_choices}}
+                <input type='radio' id='consumer-gender-{{name}}' name='gender' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='consumer-gender-{{name}}'>{{{label}}}</label>
+                {{/gender_choices}}
+              </fieldset>
               <p class='error consumer-gender-errors'></p>
             </li>
             <li class="ui-field-contain">
@@ -60,6 +67,7 @@
               </fieldset>
               <p class='error consumer-income-errors'></p>
             </li>
+            <li data-role="list-divider">2) Consumer profile</li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>Big store chains</legend>
@@ -161,13 +169,18 @@
               <p class='error consumer-priorization-errors'></p>
             </li>
             <li>
-              <div class="ui-grid-a">
+              <div class="ui-grid-b">
                 <div class="ui-block-a">
-                  <a href="{{rt}}/consumers/{{id}}" data-role="button" data-icon="back" data-direction="reverse">
-                    Back
+                  <a href="{{rt}}/consumer" data-role="button" data-icon="back" data-direction="reverse">
+                    Consumer
                   </a>
                 </div>
                 <div class="ui-block-b">
+                  <a href="{{rt}}/consumers/" data-role="button" data-icon="back" data-direction="reverse">
+                    Show submissions
+                  </a>
+                </div>
+                <div class="ui-block-c">
                   <button type="submit" data-icon="check" data-theme="b">
                     Submit
                   </button>
@@ -178,6 +191,7 @@
           </ul>
         </form>
       </div>
+      {{>footer}}
     </div>
   </body>
 </html>

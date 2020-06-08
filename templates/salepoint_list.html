@@ -15,6 +15,7 @@
         </a>
         {{/page_config.can_add}}
       </div>
+      {{>navbar}}
       <div role="main" class="ui-content">
         {{#parent_id}}
         <p>
@@ -71,7 +72,7 @@
             {{/list}}
             {{#page_config.can_add}}
             <li data-icon="plus" data-theme="b">
-              <a href="{{rt}}/salepoints/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}">Add salepoint</a>
+              <a href="{{rt}}/salepoints/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}">Add sale point</a>
             </li>
             {{/page_config.can_add}}
           </ul>
@@ -82,6 +83,7 @@
         </div>
       </div>
       {{>paginator}}
+      {{>footer}}
     </div>
   </body>
 </html>

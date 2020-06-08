@@ -15,12 +15,13 @@
         </a>
         {{/page_config.can_change}}
       </div>
+      {{>navbar}}
       <div role="main" class="ui-content">
           <h1>{{{label}}}</h1>
           <table>
             <tr>
               <th>Gender</th>
-              <td>{{{gender}}}</td>
+              <td>{{{gender_label}}}</td>
             </tr>
             <tr>
               <th>Age</th>
@@ -76,6 +77,7 @@
             </tr>
           </table>
       </div>
+      {{>footer}}
     </div>
   </body>
 </html>

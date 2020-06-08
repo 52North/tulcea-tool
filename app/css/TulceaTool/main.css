@@ -73,7 +73,7 @@ td {
 }
 
 /* Make manual option in locate app less emphasized */
-label[for=producer-toggle-manual] {
+label[for=producer-toggle-manual], label[for=salepoint-toggle-manual], label[for=storagepoint-toggle-manual] {
   color: gray !important;
 }
 

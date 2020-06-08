@@ -84,6 +84,13 @@ from wq.db.default_settings import (
     SRID,
 )
 
+ANONYMOUS_PERMISSIONS = [
+    'producer.add_producer',
+    'salepoint.add_salepoint',
+    'storagepoint.add_storagepoint',
+    'consumer.add_consumer',
+]
+
 WSGI_APPLICATION = 'TulceaTool.wsgi.application'
 
 

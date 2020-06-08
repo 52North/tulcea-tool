@@ -2,7 +2,12 @@ from django.db import models
 
 
 class Consumer(models.Model):
-    gender = models.TextField(
+    gender = models.CharField(
+        choices=(
+            ("male", "Male"),
+            ("female", "Female"),
+        ),
+        max_length=6,
         null=True,
         blank=True,
         verbose_name="Gender",
