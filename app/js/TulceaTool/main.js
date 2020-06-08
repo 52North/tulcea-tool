@@ -1,11 +1,12 @@
-define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos',
+define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', './hide',
         './config',
         'leaflet.draw', 'leaflet.markercluster'],
-function(app, map, patterns, photos, config) {
+function(app, map, patterns, photos, hide, config) {
 
 app.use(map);
 app.use(patterns);
 app.use(photos);
+app.use(hide);
 
 //  Add new map icon
 map.createIcon("producer", {'iconUrl': config.router.base_url.concat("/images/producer.png"), 'iconSize': [30, 30]});
