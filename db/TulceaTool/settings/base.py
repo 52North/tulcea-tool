@@ -71,7 +71,7 @@ TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'templates')]
 # Add context processors
 TEMPLATES[0]['OPTIONS']['context_processors'] += (
      'django.contrib.messages.context_processors.messages',
-     'SlupskTool.context_processors.route_base_url',
+     'TulceaTool.context_processors.route_base_url',
 )
 TEMPLATES[1]['OPTIONS']['context_processors'] += (
      'django.contrib.messages.context_processors.messages',
