@@ -1,11 +1,12 @@
-define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', './hide', './welcome', './config', 'leaflet.draw', 'leaflet.markercluster'],
-function(app, map, patterns, photos, hide, welcome, config) {
+define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', './hide', './welcome', 'wq/locate', './config', 'leaflet.draw', 'leaflet.markercluster'],
+function(app, map, patterns, photos, hide, welcome, locate, config) {
 
-app.use(map);
-app.use(patterns);
-app.use(photos);
 app.use(hide);
 app.use(welcome);
+app.use(photos);
+app.use(map);
+app.use(patterns);
+app.use(locate);
 
 //  Add new map icon
 map.createIcon("producer", {'iconUrl': config.router.base_url.concat("/images/producer.png"), 'iconSize': [30, 30]});
