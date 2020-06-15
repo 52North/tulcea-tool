@@ -88,9 +88,29 @@ label[for=producer-toggle-manual], label[for=salepoint-toggle-manual], label[for
 
 /* Make sure the footer does not intersect with main content */
 div[role="main"] {
-  padding-bottom: 330px;
+  padding-bottom: 360px;
 }
 
 .footer {
   list-style-type: none; /* Remove bullets */
+}
+
+/* Set style for modal welcome box */
+#welcome {
+  display: none;
+  z-index: 9999999;
+  width: 80%;
+  height: 600px;
+  position: absolute;
+  top: 220px;
+  left: 10%;
+  overflow: auto;
+}
+
+#welcome.active {
+  display: block;
+}
+
+.modal-content {
+  background-color: white;
 }
