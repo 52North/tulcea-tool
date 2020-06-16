@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'storagepoint',
     'producer',
     'consumer',
+    'feedback',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,7 @@ ANONYMOUS_PERMISSIONS = [
     'salepoint.add_salepoint',
     'storagepoint.add_storagepoint',
     'consumer.add_consumer',
+    'feedback.add_feedback',
 ]
 
 WSGI_APPLICATION = 'TulceaTool.wsgi.application'
