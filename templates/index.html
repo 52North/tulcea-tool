@@ -22,12 +22,39 @@ See https://github.com/wq/wq.app/issues/63
       <div data-role="header">
         <h1>Creating Interfaces - Tulcea</h1>
       </div>
+      {{^is_authenticated}}
+      <form action="{{svc}}/login" method="post" data-ajax="false"
+          data-wq-json="true" data-wq-background-sync="false">
+        {{>csrf}}
+        <ul data-role="listview">
+          <li>
+            <p>Currently, this website is only open for authenticated users. Please insert your username and password to proceed.</p>
+          </li>
+          <li class="ui-field-contain">
+            <label for="username">Username</label>
+            <input name="username" id="username">
+          </li>
+          <li class="ui-field-contain">
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password">
+          </li>
+          <li>
+            <button type="submit" data-icon="check" data-theme="b">
+              Submit
+            </button>
+            <p class="error login-errors"></p>
+          </li>
+        </ul>
+      </form>
+      {{/is_authenticated}}
+      {{#is_authenticated}}
       {{>navbar}}
       <div role="main" class="ui-content">
         <div class="map detail-map" id="index-map"></div>
         {{>welcome}}
       </div>
       {{>footer}}
+      {{/is_authenticated}}
     </div>
   </body>
 </html>
