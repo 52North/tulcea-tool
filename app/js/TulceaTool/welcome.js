@@ -15,12 +15,19 @@ welcome.run = function ($page, routeInfo) {
 
   /* Show welcome dialog if it is the first page load */
   $page.ready( function() {
-    ds.get('pageloadcount').then(function(pageloadcount) {
-      if(pageloadcount == null) {
-        $('div[id="welcome"]').addClass("active");
-      }
-      ds.set('pageloadcount', pageloadcount + 1);
-    });
+
+    if (window.location.pathname == "/login" ) {
+      ds.set('pageloadcount', 0);
+    }
+    else if (window.location.pathname == "/" ) {
+      ds.get('pageloadcount').then(function(pageloadcount) {
+        if(pageloadcount == null) {
+          $('div[id="welcome"]').addClass("active");
+        }
+        ds.set('pageloadcount', pageloadcount + 1);
+      });
+    }
+
   });
 
   /* Show welcome dialog */
@@ -39,12 +46,3 @@ welcome.run = function ($page, routeInfo) {
 return welcome;
 
 });
-
-
-
-
-// $( document ).ready(function() {
-// if (localStorage.getItem("pageloadcount")) { $("#landContainer").hide();
-// }
-//   localStorage.setItem("pageloadcount", "1");
-// });
