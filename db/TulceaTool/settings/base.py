@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'producer',
     'consumer',
     'feedback',
+    'watersupplier',
 ]
 
 MIDDLEWARE = [
