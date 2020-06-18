@@ -12,16 +12,16 @@ rest.router.add_page('about', {
     'url': 'about',
 })
 
-rest.router.add_page('food', {
-    'url': 'food',
+rest.router.add_page('food-guide', {
+    'url': 'food-guide',
 })
 
-rest.router.add_page('water', {
-    'url': 'water',
+rest.router.add_page('water-guide', {
+    'url': 'water-guide',
 })
 
-rest.router.add_page('consumer', {
-    'url': 'consumer',
+rest.router.add_page('consumer-guide', {
+    'url': 'consumer-guide',
 })
 
 rest.router.add_page('legal-notice', {

@@ -69,44 +69,49 @@
             </li>
             <li data-role="list-divider">2) Consumer profile</li>
             <li class="ui-field-contain">
-              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Big store chains</legend>
-                {{#big_chain_store_choices}}
-                <input type='radio' id='consumer-big_chain_store-{{name}}' name='big_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
-                <label for='consumer-big_chain_store-{{name}}'>{{{label}}}</label>
-                {{/big_chain_store_choices}}
-              </fieldset>
-              <p class='error consumer-big_chain_store-errors'></p>
-            </li>
-            <li class="ui-field-contain">
-              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Local chain stores</legend>
-                {{#local_chain_store_choices}}
-                <input type='radio' id='consumer-local_chain_store-{{name}}' name='local_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
-                <label for='consumer-local_chain_store-{{name}}'>{{{label}}}</label>
-                {{/local_chain_store_choices}}
-              </fieldset>
-              <p class='error consumer-local_chain_store-errors'></p>
-            </li>
-            <li class="ui-field-contain">
-              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Small shops</legend>
-                {{#small_shop_choices}}
-                <input type='radio' id='consumer-small_shop-{{name}}' name='small_shop' value='{{name}}'{{#selected}} checked{{/selected}}>
-                <label for='consumer-small_shop-{{name}}'>{{{label}}}</label>
-                {{/small_shop_choices}}
-              </fieldset>
-              <p class='error consumer-small_shop-errors'></p>
-            </li>
-            <li class="ui-field-contain">
-              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Market</legend>
-                {{#market_choices}}
-                <input type='radio' id='consumer-market-{{name}}' name='market' value='{{name}}'{{#selected}} checked{{/selected}}>
-                <label for='consumer-market-{{name}}'>{{{label}}}</label>
-                {{/market_choices}}
-              </fieldset>
-              <p class='error consumer-market-errors'></p>
+              <p>Source of the raw aliments for food (number selection - times per week)</p>
+              <ul>
+                <li class="ui-field-contain">
+                  <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                    <legend>Big store chains</legend>
+                    {{#big_chain_store_choices}}
+                    <input type='radio' id='consumer-big_chain_store-{{name}}' name='big_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
+                    <label for='consumer-big_chain_store-{{name}}'>{{{label}}}</label>
+                    {{/big_chain_store_choices}}
+                  </fieldset>
+                  <p class='error consumer-big_chain_store-errors'></p>
+                </li>
+                <li class="ui-field-contain">
+                  <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                    <legend>Local chain stores</legend>
+                    {{#local_chain_store_choices}}
+                    <input type='radio' id='consumer-local_chain_store-{{name}}' name='local_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
+                    <label for='consumer-local_chain_store-{{name}}'>{{{label}}}</label>
+                    {{/local_chain_store_choices}}
+                  </fieldset>
+                  <p class='error consumer-local_chain_store-errors'></p>
+                </li>
+                <li class="ui-field-contain">
+                  <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                    <legend>Small shops</legend>
+                    {{#small_shop_choices}}
+                    <input type='radio' id='consumer-small_shop-{{name}}' name='small_shop' value='{{name}}'{{#selected}} checked{{/selected}}>
+                    <label for='consumer-small_shop-{{name}}'>{{{label}}}</label>
+                    {{/small_shop_choices}}
+                  </fieldset>
+                  <p class='error consumer-small_shop-errors'></p>
+                </li>
+                <li class="ui-field-contain">
+                  <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                    <legend>Market</legend>
+                    {{#market_choices}}
+                    <input type='radio' id='consumer-market-{{name}}' name='market' value='{{name}}'{{#selected}} checked{{/selected}}>
+                    <label for='consumer-market-{{name}}'>{{{label}}}</label>
+                    {{/market_choices}}
+                  </fieldset>
+                  <p class='error consumer-market-errors'></p>
+                </li>
+              </ul>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
