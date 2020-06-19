@@ -8,27 +8,36 @@ rest.router.register_model(
     locate=True,
     map=[{
         'mode': 'list',
-        'autoLayers': True,
-        'layers': [],
-    }, {
-        'mode': 'detail',
-        'autoLayers': True,
-        'layers': [],
-    }, {
-        'mode': 'edit',
+        'autoZoom' : False,
         'layers': [{
             'type': 'geojson',
-            'name': 'geometry',
+            'name': '<span style="padding-right: 5px;">Water suppliers</span><img style="height: 20px;" src="images/watersupplier.png">',
+            'url': 'watersuppliers.geojson',
+            'popup': 'watersupplier',
+            'icon' : 'watersupplier',
+        }],
+    }, {
+        'mode': 'detail',
+        'autoZoom' : True,
+        'layers': [{
+            'type': 'geojson',
+            'name': '<span style="padding-right: 5px;">Water suppliers</span><img style="height: 20px;" src="images/watersupplier.png">',
+            'url': 'watersuppliers/{{id}}.geojson',
+            'popup': 'watersupplier',
+            'flatten': True,
+            'icon' : 'watersupplier',
+        }],
+    }, {
+        'mode': 'edit',
+        'autoZoom' : True,
+        'layers': [{
+            'type': 'geojson',
+            'name': '<span style="padding-right: 5px;">Water supplier</span><img style="height: 20px;" src="images/watersupplier.png">',
             'url': 'watersuppliers/{{id}}/edit.geojson',
-            'draw': {
-                'circle': False,
-                'marker': {},
-                'polyline': False,
-                'polygon': False,
-                'rectangle': False,
-            },
+            'popup': 'watersupplier',
             'geometryField': 'geometry',
             'flatten': True,
+            'icon' : 'watersupplier',
         }],
     }],
 )

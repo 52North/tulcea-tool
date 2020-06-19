@@ -32,5 +32,12 @@ index_map = [{
         'url': 'producers.geojson',
         'popup': 'producer',
         'icon' : 'producer',
+    },
+    {
+        'name': '<span style="padding-right: 5px;">Water suppliers</span><img style="height: 20px;" src="images/watersupplier.png">',
+        'type': 'geojson',
+        'url': 'watersuppliers.geojson',
+        'popup': 'watersupplier',
+        'icon' : 'watersupplier',
     }]
 }]
