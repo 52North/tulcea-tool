@@ -22,9 +22,15 @@ See https://github.com/wq/wq.app/issues/63
       {{>navbar}}
       <div role="main" class="ui-content justified">
         <p>
-          On this site, you can find and submit information about consumers. General information about the consumer like age and gender is included as well as consumer behaviour and preferences.
+          On this site, you can submit information about your usage of energy.
         </p>
         <ul data-role="listview" data-inset="true">
+          <li>
+            <a href="{{rt}}/energyusages/new" data-role="button" data-icon="plus">Add energy usage</a>
+          </li>
+          <li>
+            <a href="{{rt}}/energyusages" data-role="button" data-icon="bars">List of energy usages</a>
+          </li>
         </ul>
       </div>
       {{>footer}}

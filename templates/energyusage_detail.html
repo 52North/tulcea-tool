@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{{label}}}</title>
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        {{>home}}
+        <h1>{{{label}}}</h1>
+        {{#page_config.can_change}}
+        <a href="{{rt}}/energyusages/{{id}}/edit" data-icon="edit" data-transition="flip">
+          Edit
+        </a>
+        {{/page_config.can_change}}
+      </div>
+      {{>navbar}}
+      <div role="main" class="ui-content">
+        <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <h1>{{{label}}}</h1>
+          <table>
+            <tr>
+              <th>What type of energy do you use?</th>
+              <td>{{{energy_type_label}}}</td>
+            </tr>
+            <tr>
+              <th>Would you like to use more renewable energy?</th>
+              <td>{{{more_renewable_label}}}</td>
+            </tr>
+            <tr>
+              <th>What type of renewable energy do you use?</th>
+              <td>{{{renewable_type_label}}}</td>
+            </tr>
+            <tr>
+              <th>Location Mode</th>
+              <td>{{toggle_label}}</td>
+            </tr>
+            <tr>
+              <th>Latitude</th>
+              <td>{{latitude}}</td>
+            </tr>
+            <tr>
+              <th>Longitude</th>
+              <td>{{longitude}}</td>
+            </tr>
+            <tr>
+              <th>GPS Accuracy</th>
+              <td>{{accuracy}}</td>
+            </tr>
+          </table>
+          <div class="ui-grid-a" style="padding-top: 50px">
+            <div class="ui-block-a">
+              <a href="{{rt}}/energyusages/" data-role="button" data-icon="bars" data-direction="reverse">
+                Show all energy usages
+              </a>
+            </div>
+            <div class="ui-block-b">
+              <a href="{{rt}}/energyusages/new" data-role="button" data-icon="plus">
+                Add energy usage
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="map detail-map" id="energyusage-{{id}}-map"></div>
+        </div>
+        </div>
+      </div>
+      {{>footer}}
+    </div>
+  </body>
+</html>

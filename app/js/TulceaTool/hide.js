@@ -21,6 +21,12 @@ define({
         // $('.wq-no-hide').removeAttr('data-error');
       }
 
+      if ($button.val() == "renewable" || $button.val() == "both") {
+        $('.wq-renewable-hide').show();
+      } else {
+        $('.wq-renewable-hide').hide();
+      }
+
     })
 
   }

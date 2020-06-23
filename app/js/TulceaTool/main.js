@@ -13,6 +13,7 @@ map.createIcon("producer", {'iconUrl': config.router.base_url.concat("/images/pr
 map.createIcon("salepoint", {'iconUrl': config.router.base_url.concat("/images/salepoint.png"), 'iconSize': [30, 30]});
 map.createIcon("storagepoint", {'iconUrl': config.router.base_url.concat("/images/storagepoint.png"), 'iconSize': [30, 30]});
 map.createIcon("watersupplier", {'iconUrl': config.router.base_url.concat("/images/watersupplier.png"), 'iconSize': [20, 30]});
+map.createIcon("energysource", {'iconUrl': config.router.base_url.concat("/images/energysource.png"), 'iconSize': [20, 30]});
 
 config.presync = presync;
 config.postsync = postsync;

@@ -39,5 +39,12 @@ index_map = [{
         'url': 'watersuppliers.geojson',
         'popup': 'watersupplier',
         'icon' : 'watersupplier',
+    },
+    {
+        'name': '<span style="padding-right: 5px;">Renewable energy sources</span><img style="height: 20px;" src="images/energysource.png">',
+        'type': 'geojson',
+        'url': 'energyusages.geojson',
+        'popup': 'energyusage',
+        'icon' : 'energysource',
     }]
 }]

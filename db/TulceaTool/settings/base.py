@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'consumer',
     'feedback',
     'watersupplier',
+    'energyusage',
 ]
 
 MIDDLEWARE = [
