@@ -20,8 +20,8 @@ rest.router.add_page('water-guide', {
     'url': 'water-guide',
 })
 
-rest.router.add_page('consumer-guide', {
-    'url': 'consumer-guide',
+rest.router.add_page('energy-guide', {
+    'url': 'energy-guide',
 })
 
 rest.router.add_page('legal-notice', {

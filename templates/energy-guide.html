@@ -8,7 +8,7 @@ See https://github.com/wq/wq.app/issues/63
 -->
 <html><!-- manifest="SlupskTool.appcache" -->
   <head>
-    <title>Consumer</title>
+    <title>Energy</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     {{>head}}
@@ -17,7 +17,7 @@ See https://github.com/wq/wq.app/issues/63
     <div data-role="page" class="ui-page">
       <div data-role="header">
         {{>home}}
-        <h1>Consumer</h1>
+        <h1>Energy</h1>
       </div>
       {{>navbar}}
       <div role="main" class="ui-content justified">
@@ -25,12 +25,6 @@ See https://github.com/wq/wq.app/issues/63
           On this site, you can find and submit information about consumers. General information about the consumer like age and gender is included as well as consumer behaviour and preferences.
         </p>
         <ul data-role="listview" data-inset="true">
-          <li>
-            <a href="{{rt}}/consumers/new" data-role="button" data-icon="plus">Add consumer</a>
-          </li>
-          <li>
-            <a href="{{rt}}/consumers" data-role="button" data-icon="bars">List of consumers</a>
-          </li>
         </ul>
       </div>
       {{>footer}}
