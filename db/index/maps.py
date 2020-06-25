@@ -46,5 +46,12 @@ index_map = [{
         'url': 'energyusages.geojson',
         'popup': 'energyusage',
         'icon' : 'energysource',
+    },
+    {
+        'name': '<span style="padding-right: 5px;">Production services</span><img style="height: 20px;" src="images/productionservice.png">',
+        'type': 'geojson',
+        'url': 'productionservices.geojson',
+        'popup': 'productionservice',
+        'icon' : 'productionservice',
     }]
 }]

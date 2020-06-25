@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{{label}}}</title>
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        {{>home}}
+        <h1>{{{label}}}</h1>
+        {{#page_config.can_change}}
+        <a href="{{rt}}/productionservices/{{id}}/edit" data-icon="edit" data-transition="flip">
+          Edit
+        </a>
+        {{/page_config.can_change}}
+      </div>
+      {{>navbar}}
+      <div role="main" class="ui-content">
+        <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <h1>{{{label}}}</h1>
+          <table>
+            <tr>
+              <th>Name</th>
+              <td>{{{name}}}</td>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <td>{{{type_label}}}</td>
+            </tr>
+            <tr>
+              <th>Main product(s)</th>
+              <td>{{{product}}}</td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td>{{{address}}}</td>
+            </tr>
+            <tr>
+              <th>Telephone</th>
+              <td>{{{phone}}}</td>
+            </tr>
+            <tr>
+              <th>E-mail</th>
+              <td>{{{email}}}</td>
+            </tr>
+            <tr>
+              <th>Website</th>
+              <td>{{{website}}}</td>
+            </tr>
+            <tr>
+              <th>Location Mode</th>
+              <td>{{toggle_label}}</td>
+            </tr>
+            <tr>
+              <th>Latitude</th>
+              <td>{{latitude}}</td>
+            </tr>
+            <tr>
+              <th>Longitude</th>
+              <td>{{longitude}}</td>
+            </tr>
+            <tr>
+              <th>GPS Accuracy</th>
+              <td>{{accuracy}}</td>
+            </tr>
+            <tr>
+              <th>Source of raw material</th>
+              <td>{{{raw_material}}}</td>
+            </tr>
+            <tr>
+              <th>Water quantity need (in m³ per month)</th>
+              <td>{{water_quantity}}</td>
+            </tr>
+            <tr>
+              <th>Average energy consumption (in kWh per month)</th>
+              <td>{{energy_consumption}}</td>
+            </tr>
+            <tr>
+              <th>Storage point</th>
+              <td>{{{storagepoint_label}}}</td>
+            </tr>
+            <tr>
+              <th>Sale point</th>
+              <td>{{{salepoint_label}}}</td>
+            </tr>
+            <tr>
+              <th>Distance: production site → storage → shop</th>
+              <td>{{distance}}</td>
+            </tr>
+            <tr>
+              <th>Are the measures taken in the context of limiting COVID-19 infection affecting you?</th>
+              <td>{{{covid_affected_label}}}</td>
+            </tr>
+            <tr>
+              <th>The main effect is</th>
+              <td>{{{main_effect_label}}}</td>
+            </tr>
+            <tr>
+              <th>What is the percentage by which you estimate the decrease in turnover?</th>
+              <td>{{{turnover_decrease_label}}}</td>
+            </tr>
+          </table>
+          <div class="ui-grid-a" style="padding-top: 50px">
+            <div class="ui-block-a">
+              <a href="{{rt}}/productionservices/" data-role="button" data-icon="bars" data-direction="reverse">
+                Show all production services
+              </a>
+            </div>
+            <div class="ui-block-b">
+              <a href="{{rt}}/productionservices/new" data-role="button" data-icon="plus">
+                Add production service
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="map detail-map" id="productionservice-{{id}}-map"></div>
+        </div>
+        </div>
+      </div>
+      {{>footer}}
+    </div>
+  </body>
+</html>
