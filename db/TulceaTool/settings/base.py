@@ -138,4 +138,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'htdocs', 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 VERSION_TXT = os.path.join(BASE_DIR, 'version.txt')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/tulcea-tool/media/'
