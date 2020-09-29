@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+import pystache
 
 
 class Productionservice(models.Model):
@@ -148,6 +149,11 @@ class Productionservice(models.Model):
         blank=True,
         verbose_name="What is the percentage by which you estimate the decrease in turnover?",
     )
+
+    wq_label_template = "{{name}}"
+
+    def __str__(self):
+        return pystache.render(self.wq_label_template, self)
 
     class Meta:
         verbose_name = "productionservice"
