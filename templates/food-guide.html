@@ -8,7 +8,7 @@ See https://github.com/wq/wq.app/issues/63
 -->
 <html><!-- manifest="SlupskTool.appcache" -->
   <head>
-    <title>Food</title>
+    <title>{{{i18n_food_p1}}}</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     {{>head}}
@@ -17,45 +17,47 @@ See https://github.com/wq/wq.app/issues/63
     <div data-role="page" class="ui-page">
       <div data-role="header">
         {{>home}}
-        <h1>Food</h1>
+        <h1>{{{i18n_food_p1}}}</h1>
         {{>language}}
       </div>
       {{>navbar}}
       <div role="main" class="ui-content justified">
         <p>
-          On this site, you can find and submit information about food in and around Tulcea. <br>
-          You can add food producers and production services with their sale points and storage points.
+          {{{i18n_food_p2}}}
+        </p>
+        <p>
+          {{{i18n_food_p3}}}
         </p>
         <ul data-role="listview" data-inset="true">
           <li>
-            <a href="{{rt}}/salepoints/new" data-role="button" data-icon="plus">Add sale point</a>
+            <a href="{{rt}}/salepoints/new" data-role="button" data-icon="plus">{{{i18n_food_p4}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/salepoints" data-role="button" data-icon="bars">List of sale points</a>
+            <a href="{{rt}}/salepoints" data-role="button" data-icon="bars">{{{i18n_food_p5}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/storagepoints/new" data-role="button" data-icon="plus">Add storage point</a>
+            <a href="{{rt}}/storagepoints/new" data-role="button" data-icon="plus">{{{i18n_food_p6}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/storagepoints" data-role="button" data-icon="bars">List of storage points</a>
+            <a href="{{rt}}/storagepoints" data-role="button" data-icon="bars">{{{i18n_food_p7}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/producers/new" data-role="button" data-icon="plus">Add producer</a>
+            <a href="{{rt}}/producers/new" data-role="button" data-icon="plus">{{{i18n_food_p8}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/producers" data-role="button" data-icon="bars">List of producers</a>
+            <a href="{{rt}}/producers" data-role="button" data-icon="bars">{{{i18n_food_p9}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/productionservices/new" data-role="button" data-icon="plus">Add production service</a>
+            <a href="{{rt}}/productionservices/new" data-role="button" data-icon="plus">{{{i18n_food_p10}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/productionservices" data-role="button" data-icon="bars">List of production services</a>
+            <a href="{{rt}}/productionservices" data-role="button" data-icon="bars">{{{i18n_food_p11}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/consumers/new" data-role="button" data-icon="plus">Add consumer</a>
+            <a href="{{rt}}/consumers/new" data-role="button" data-icon="plus">{{{i18n_food_p12}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/consumers" data-role="button" data-icon="bars">List of consumers</a>
+            <a href="{{rt}}/consumers" data-role="button" data-icon="bars">{{{i18n_food_p13}}}</a>
           </li>
         </ul>
       </div>

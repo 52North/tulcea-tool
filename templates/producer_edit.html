@@ -36,15 +36,15 @@
           <input type=hidden name="_method" value="PUT">
           {{/id}}
           <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">1) General</li>
+            <li data-role="list-divider">1) {{{i18n_general}}}</li>
             <li class="ui-field-contain">
-              <label for='producer-name'>Name</label>
+              <label for='producer-name'>{{{i18n_name}}}</label>
               <input id='producer-name' type='text' data-xform-type='string' name='name' value="{{name}}">
               <p class='error producer-name-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Type</legend>
+                <legend>{{{i18n_type}}}</legend>
                 {{#type_choices}}
                 <input type='radio' id='producer-type-{{name}}' name='type' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-type-{{name}}'>{{{label}}}</label>
@@ -53,23 +53,23 @@
               <p class='error producer-type-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-product'>Main product(s)</label>
+              <label for='producer-product'>{{{i18n_products}}}</label>
               <input id='producer-product' type='text' data-xform-type='string' name='product' value="{{product}}">
               <p class='error producer-product-errors'></p>
             </li>
-            <li data-role="list-divider">2) Contact</li>
+            <li data-role="list-divider">2) {{{i18n_contact}}}</li>
             <li class="ui-field-contain">
-              <label for='producer-address'>Address</label>
+              <label for='producer-address'>{{{i18n_address}}}</label>
               <input id='producer-address' type='text' data-xform-type='string' name='address' value="{{address}}">
               <p class='error producer-address-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-phone'>Telephone</label>
+              <label for='producer-phone'>{{{i18n_telephone}}}</label>
               <input id='producer-phone' type='text' data-xform-type='string' name='phone' value="{{phone}}">
               <p class='error producer-phone-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-email'>E-mail</label>
+              <label for='producer-email'>{{{i18n_email}}}</label>
               <input id='producer-email' type='text' data-xform-type='string' name='email' value="{{email}}">
               <p class='error producer-email-errors'></p>
             </li>
@@ -78,10 +78,10 @@
               <input id='producer-website' type='text' data-xform-type='string' name='website' value="{{website}}">
               <p class='error producer-website-errors'></p>
             </li>
-            <li data-role="list-divider">3) Location</li>
+            <li data-role="list-divider">3) {{{i18n_location}}}</li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Location Mode</legend>
+                <legend>{{{i18n_location_mode}}}</legend>
                 {{#toggle_choices}}
                 <input type='radio' id='producer-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-toggle-{{name}}'>{{{label}}}</label>
@@ -90,30 +90,30 @@
               <p class='error producer-toggle-errors'></p>
             </li>
             <li>
-              <label for='producer-geometry'>Location</label>
+              <label for='producer-geometry'>{{{i18n_location}}}</label>
               <input type='hidden' data-xform-type='geopoint' name='geometry'>
               <div class="map edit-map" id='producer-{{id}}{{^id}}new{{/id}}-edit-map'></div>
               <p class='error producer-geometry-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-latitude'>Latitude</label>
+              <label for='producer-latitude'>{{{i18n_latitude}}}</label>
               <input id='producer-latitude' type='number' data-xform-type='decimal' name='latitude' step='0.000001' value="{{latitude}}">
               <p class='error producer-latitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-longitude'>Longitude</label>
+              <label for='producer-longitude'>{{{i18n_longitude}}}</label>
               <input id='producer-longitude' type='number' data-xform-type='decimal' name='longitude' step='0.000001' value="{{longitude}}">
               <p class='error producer-longitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-accuracy'>GPS Accuracy</label>
+              <label for='producer-accuracy'>{{{i18n_accuracy}}}</label>
               <input id='producer-accuracy' type='number' data-xform-type='decimal' name='accuracy' step='0.000001' value="{{accuracy}}">
               <p class='error producer-accuracy-errors'></p>
             </li>
-            <li data-role="list-divider">4) Water and energy</li>
+            <li data-role="list-divider">4) {{{i18n_water_energy}}}</li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Do you use water for irrigation?</legend>
+                <legend>{{{i18n_irrigation_use}}}</legend>
                 {{#irrigation_use_choices}}
                 <input type='radio' id='producer-irrigation_use-{{name}}' class="wq-hide" name='irrigation_use' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_use-{{name}}'>{{{label}}}</label>
@@ -123,7 +123,7 @@
             </li>
             <li class="ui-field-contain wq-yes-hide">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Do you have interest to use water for irrigation?</legend>
+                <legend>{{{i18n_irrigation_interest}}}</legend>
                 {{#irrigation_interest_choices}}
                 <input type='radio' id='producer-irrigation_interest-{{name}}' name='irrigation_interest' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_interest-{{name}}'>{{{label}}}</label>
@@ -132,13 +132,13 @@
               <p class='error producer-irrigation_interest-errors'></p>
             </li>
             <li class="ui-field-contain wq-no-hide">
-              <label for='producer-irrigation_quantity'>Water quantity (in m³ per year)</label>
+              <label for='producer-irrigation_quantity'>{{{i18n_water_quantity}}}</label>
               <input id='producer-irrigation_quantity' type='number' data-xform-type='decimal' name='irrigation_quantity' step='0.001' value="{{irrigation_quantity}}">
               <p class='error producer-irrigation_quantity-errors'></p>
             </li>
             <li class="ui-field-contain wq-no-hide">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Water quality</legend>
+                <legend>{{{i18n_water_quality}}}</legend>
                 {{#irrigation_quality_choices}}
                 <input type='radio' id='producer-irrigation_quality-{{name}}' name='irrigation_quality' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_quality-{{name}}'>{{{label}}}</label>
@@ -147,30 +147,30 @@
               <p class='error producer-irrigation_quality-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-electrical_consumption'>Average electrical consumption (in kWh per year)</label>
+              <label for='producer-electrical_consumption'>{{{i18n_electrical_consumption}}}</label>
               <input id='producer-electrical_consumption' type='number' data-xform-type='decimal' name='electrical_consumption' step='0.001' value="{{electrical_consumption}}">
               <p class='error producer-electrical_consumption-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-distance'>Distance: producer → storage → sale point (km)</label>
+              <label for='producer-distance'>{{{i18n_distance}}}</label>
               <input id='producer-distance' type='number' data-xform-type='decimal' name='distance' step='0.001' value="{{distance}}">
-                <p class="hint" style="color: red;"><br>To calculate the distance you can use the line tool in the map above. Be careful when the location mode 'Point on Map' is selected. In this case, when drawing a line the location of the producer will be changed. To avoid this, you can temporarily choose 'Enter Manually' as location mode.</p>
+                <p class="hint" style="color: red;"><br>{{{i18n_distance_hint}}}</p>
               <p class='error producer-distance-errors'></p>
             </li>
-            <li data-role="list-divider">5) Food</li>
+            <li data-role="list-divider">5) {{{i18n_food_p1}}}</li>
             <li class="ui-field-contain">
-              <label for='producer-production'>Production (in kg/ha per year)</label>
+              <label for='producer-production'>{{{i18n_production}}}</label>
               <input id='producer-production' type='number' data-xform-type='decimal' name='production' step='0.1' value="{{production}}">
               <p class='error producer-production-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-surface'>Surface (in ha)</label>
+              <label for='producer-surface'>{{{i18n_surface}}}</label>
               <input id='producer-surface' type='number' data-xform-type='decimal' name='surface' step='0.1' value="{{surface}}">
               <p class='error producer-surface-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Uses</legend>
+                <legend>{{{i18n_uses}}}</legend>
                 {{#use_choices}}
                 <input type='radio' id='producer-use-{{name}}' name='use' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-use-{{name}}'>{{{label}}}</label>
@@ -216,7 +216,7 @@
               <div class="ui-grid-b">
                 <div class="ui-block-a">
                   <a href="{{rt}}/" data-role="button" data-icon="back" data-direction="reverse">
-                    Home
+                    {{{i18n_home}}}
                   </a>
                 </div>
                 <div class="ui-block-b">
@@ -226,7 +226,7 @@
                 </div>
                 <div class="ui-block-c">
                   <button type="submit" data-icon="check" data-theme="b">
-                    Submit
+                    {{{i18n_submit}}}
                   </button>
                 </div>
               </div>

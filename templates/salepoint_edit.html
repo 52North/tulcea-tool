@@ -36,47 +36,47 @@
           <input type=hidden name="_method" value="PUT">
           {{/id}}
           <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">1) General</li>
+            <li data-role="list-divider">1) {{{i18n_general}}}</li>
             <li class="ui-field-contain">
-              <label for='salepoint-name'>Name</label>
+              <label for='salepoint-name'>{{{i18n_name}}}</label>
               <input id='salepoint-name' type='text' data-xform-type='string' name='name' value="{{name}}">
               <p class='error salepoint-name-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-type'>Type</label>
+              <label for='salepoint-type'>{{{i18n_type}}}</label>
               <input id='salepoint-type' type='text' data-xform-type='string' name='type' value="{{type}}">
               <p class='error salepoint-type-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-product'>Main product(s)</label>
+              <label for='salepoint-product'>{{{i18n_products}}}</label>
               <input id='salepoint-product' type='text' data-xform-type='string' name='product' value="{{product}}">
               <p class='error salepoint-product-errors'></p>
             </li>
-            <li data-role="list-divider">2) Contact</li>
+            <li data-role="list-divider">2) {{{i18n_contact}}}</li>
             <li class="ui-field-contain">
-              <label for='salepoint-address'>Address</label>
+              <label for='salepoint-address'>{{{i18n_address}}}</label>
               <input id='salepoint-address' type='text' data-xform-type='string' name='address' value="{{address}}">
               <p class='error salepoint-address-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-phone'>Telephone</label>
+              <label for='salepoint-phone'>{{{i18n_telephone}}}</label>
               <input id='salepoint-phone' type='text' data-xform-type='string' name='phone' value="{{phone}}">
               <p class='error salepoint-phone-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-email'>E-mail</label>
+              <label for='salepoint-email'>{{{i18n_email}}}</label>
               <input id='salepoint-email' type='text' data-xform-type='string' name='email' value="{{email}}">
               <p class='error salepoint-email-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-website'>Website</label>
+              <label for='salepoint-website'>{{{i18n_website}}}</label>
               <input id='salepoint-website' type='text' data-xform-type='string' name='website' value="{{website}}">
               <p class='error salepoint-website-errors'></p>
             </li>
-            <li data-role="list-divider">3) Location</li>
+            <li data-role="list-divider">3) {{{i18n_location}}}</li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Location Mode</legend>
+                <legend>{{{i18n_location_mode}}}</legend>
                 {{#toggle_choices}}
                 <input type='radio' id='salepoint-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='salepoint-toggle-{{name}}'>{{{label}}}</label>
@@ -85,23 +85,23 @@
               <p class='error salepoint-toggle-errors'></p>
             </li>
             <li>
-              <label for='salepoint-geometry'>Location</label>
+              <label for='salepoint-geometry'>{{{i18n_location}}}</label>
               <input type='hidden' data-xform-type='geopoint' name='geometry'>
               <div class="map edit-map" id='salepoint-{{id}}{{^id}}new{{/id}}-edit-map'></div>
               <p class='error salepoint-geometry-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-latitude'>Latitude</label>
+              <label for='salepoint-latitude'>{{{i18n_latitude}}}</label>
               <input id='salepoint-latitude' type='number' data-xform-type='decimal' name='latitude' step='0.000001' value="{{latitude}}">
               <p class='error salepoint-latitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-longitude'>Longitude</label>
+              <label for='salepoint-longitude'>{{{i18n_longitude}}}</label>
               <input id='salepoint-longitude' type='number' data-xform-type='decimal' name='longitude' step='0.000001' value="{{longitude}}">
               <p class='error salepoint-longitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='salepoint-accuracy'>GPS Accuracy</label>
+              <label for='salepoint-accuracy'>{{{i18n_accuracy}}}</label>
               <input id='salepoint-accuracy' type='number' data-xform-type='decimal' name='accuracy' step='0.000001' value="{{accuracy}}">
               <p class='error salepoint-accuracy-errors'></p>
             </li>
@@ -109,17 +109,17 @@
               <div class="ui-grid-b">
                 <div class="ui-block-a">
                   <a href="{{rt}}/" data-role="button" data-icon="back" data-direction="reverse">
-                    Home
+                    {{{i18n_home}}}
                   </a>
                 </div>
                 <div class="ui-block-b">
                   <a href="{{rt}}/salepoints/" data-role="button" data-icon="back" data-direction="reverse">
-                    Show sale points
+                    {{{i18n_food_p5}}}
                   </a>
                 </div>
                 <div class="ui-block-c">
                   <button type="submit" data-icon="check" data-theme="b">
-                    Submit
+                    {{{i18n_submit}}}
                   </button>
                 </div>
               </div>
