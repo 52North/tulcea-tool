@@ -21,6 +21,7 @@ See https://github.com/wq/wq.app/issues/63
     <div data-role="page" class="ui-page">
       <div data-role="header">
         <h1>Creating Interfaces - Tulcea</h1>
+        {{>language}}
       </div>
       {{^is_authenticated}}
       <form action="{{svc}}/login" method="post" data-ajax="false"

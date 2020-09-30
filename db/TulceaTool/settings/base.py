@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -76,6 +77,7 @@ TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'templates')]
 TEMPLATES[0]['OPTIONS']['context_processors'] += (
      'django.contrib.messages.context_processors.messages',
      'TulceaTool.context_processors.route_base_url',
+     'TulceaTool.i18n.translation.translate',
 )
 TEMPLATES[1]['OPTIONS']['context_processors'] += (
      'django.contrib.messages.context_processors.messages',
@@ -118,7 +120,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    ('ro', 'Romanian'),
+    ('en', 'English'),
+]
+
+LANGUAGE_CODE = 'ro'
 
 TIME_ZONE = 'UTC'
 
