@@ -61,6 +61,12 @@ class Productionservice(models.Model):
         blank=True,
         verbose_name="Location",
     )
+    geometry_line = models.LineStringField(
+        srid=4326,
+        null=True,
+        blank=True,
+        verbose_name="Use the map to estimate the distance.",
+    )
     latitude = models.FloatField(
         null=True,
         blank=True,
@@ -108,7 +114,7 @@ class Productionservice(models.Model):
     distance = models.FloatField(
         null=True,
         blank=True,
-        verbose_name="Distance: production site → storage → shop",
+        verbose_name="Distance: production site → storage → sale point (km)",
     )
     covid_affected = models.CharField(
         choices=(

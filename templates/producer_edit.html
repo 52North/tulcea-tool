@@ -152,8 +152,9 @@
               <p class='error producer-electrical_consumption-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-distance'>Distance: producer → storage → shop</label>
+              <label for='producer-distance'>Distance: producer → storage → sale point (km)</label>
               <input id='producer-distance' type='number' data-xform-type='decimal' name='distance' step='0.001' value="{{distance}}">
+                <p class="hint" style="color: red;"><br>To calculate the distance you can use the line tool in the map above. Be careful when the location mode 'Point on Map' is selected. In this case, when drawing a line the location of the producer will be changed. To avoid this, you can temporarily choose 'Enter Manually' as location mode.</p>
               <p class='error producer-distance-errors'></p>
             </li>
             <li data-role="list-divider">5) Food</li>

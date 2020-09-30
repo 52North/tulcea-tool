@@ -61,6 +61,12 @@ class Producer(models.Model):
         blank=True,
         verbose_name="Location",
     )
+    geometry_line = models.LineStringField(
+        srid=4326,
+        null=True,
+        blank=True,
+        verbose_name="Use the map to estimate the distance.",
+    )
     latitude = models.FloatField(
         null=True,
         blank=True,
@@ -119,7 +125,7 @@ class Producer(models.Model):
     distance = models.FloatField(
         null=True,
         blank=True,
-        verbose_name="Distance: producer → storage → shop",
+        verbose_name="Distance: producer → storage → sale point (km)",
     )
     production = models.FloatField(
         null=True,
