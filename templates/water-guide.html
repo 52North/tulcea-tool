@@ -8,7 +8,7 @@ See https://github.com/wq/wq.app/issues/63
 -->
 <html><!-- manifest="SlupskTool.appcache" -->
   <head>
-    <title>Water</title>
+    <title>{{{i18n_water_p1}}}</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     {{>head}}
@@ -17,20 +17,20 @@ See https://github.com/wq/wq.app/issues/63
     <div data-role="page" class="ui-page">
       <div data-role="header">
         {{>home}}
-        <h1>Water</h1>
+        <h1>{{{i18n_water_p1}}}</h1>
         {{>language}}
       </div>
       {{>navbar}}
       <div role="main" class="ui-content justified">
         <p>
-          On this site, you can find and submit information about water suppliers in and around Tulcea. <br>
+          {{{i18n_water_p2}}} <br>
         </p>
         <ul data-role="listview" data-inset="true">
           <li>
-            <a href="{{rt}}/watersuppliers/new" data-role="button" data-icon="plus">Add water supplier</a>
+            <a href="{{rt}}/watersuppliers/new" data-role="button" data-icon="plus">{{{i18n_add_watersupplier}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/watersuppliers" data-role="button" data-icon="bars">List of water suppliers</a>
+            <a href="{{rt}}/watersuppliers" data-role="button" data-icon="bars">{{{i18n_watersupplier_list}}}</a>
           </li>
         </ul>
       </div>

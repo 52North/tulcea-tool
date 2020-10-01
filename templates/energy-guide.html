@@ -8,7 +8,7 @@ See https://github.com/wq/wq.app/issues/63
 -->
 <html><!-- manifest="SlupskTool.appcache" -->
   <head>
-    <title>Energy</title>
+    <title>{{{i18n_energy_p1}}}</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     {{>head}}
@@ -17,20 +17,20 @@ See https://github.com/wq/wq.app/issues/63
     <div data-role="page" class="ui-page">
       <div data-role="header">
         {{>home}}
-        <h1>Energy</h1>
+        <h1>{{{i18n_energy_p1}}}</h1>
         {{>language}}
       </div>
       {{>navbar}}
       <div role="main" class="ui-content justified">
         <p>
-          On this site, you can submit information about your usage of energy.
+          {{{i18n_energy_p2}}}
         </p>
         <ul data-role="listview" data-inset="true">
           <li>
-            <a href="{{rt}}/energyusages/new" data-role="button" data-icon="plus">Add energy usage</a>
+            <a href="{{rt}}/energyusages/new" data-role="button" data-icon="plus">{{{i18n_add_energyusage}}}</a>
           </li>
           <li>
-            <a href="{{rt}}/energyusages" data-role="button" data-icon="bars">List of energy usages</a>
+            <a href="{{rt}}/energyusages" data-role="button" data-icon="bars">{{{i18n_energyusage_list}}}</a>
           </li>
         </ul>
       </div>

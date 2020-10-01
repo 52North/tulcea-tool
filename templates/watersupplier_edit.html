@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} water supplier</title>
+    <title>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_watersupplier}}}</title>
     {{>head}}
   </head>
   <body>
     <div data-role="page">
       <div data-role="header">
         {{>home}}
-        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} water supplier</h1>
+        <h1>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_watersupplier}}}</h1>
         {{#id}}
         {{#page_config.can_delete}}
         <form action="{{svc}}/watersuppliers/{{id}}" method="post" data-ajax="false"
@@ -36,42 +36,42 @@
           <input type=hidden name="_method" value="PUT">
           {{/id}}
           <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">1) General</li>
+            <li data-role="list-divider">1) {{{i18n_general}}}</li>
             <li class="ui-field-contain">
-              <label for='watersupplier-name'>Name</label>
+              <label for='watersupplier-name'>{{{i18n_name}}}</label>
               <input id='watersupplier-name' type='text' data-xform-type='string' name='name' value="{{name}}">
               <p class='error watersupplier-name-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-type'>Type of supplier</label>
+              <label for='watersupplier-type'>{{{i18n_type}}}</label>
               <input id='watersupplier-type' type='text' data-xform-type='string' name='type' value="{{type}}">
               <p class='error watersupplier-type-errors'></p>
             </li>
-            <li data-role="list-divider">2) Contact</li>
+            <li data-role="list-divider">2) {{{i18n_contact}}}</li>
             <li class="ui-field-contain">
-              <label for='watersupplier-address'>Address</label>
+              <label for='watersupplier-address'>{{{i18n_address}}}</label>
               <input id='watersupplier-address' type='text' data-xform-type='string' name='address' value="{{address}}">
               <p class='error watersupplier-address-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-phone'>Telephone</label>
+              <label for='watersupplier-phone'>{{{i18n_telephone}}}</label>
               <input id='watersupplier-phone' type='text' data-xform-type='string' name='phone' value="{{phone}}">
               <p class='error watersupplier-phone-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-email'>E-mail</label>
+              <label for='watersupplier-email'>{{{i18n_email}}}</label>
               <input id='watersupplier-email' type='text' data-xform-type='string' name='email' value="{{email}}">
               <p class='error watersupplier-email-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-website'>Website</label>
+              <label for='watersupplier-website'>{{{i18n_website}}}</label>
               <input id='watersupplier-website' type='text' data-xform-type='string' name='website' value="{{website}}">
               <p class='error watersupplier-website-errors'></p>
             </li>
-            <li data-role="list-divider">3) Location of headquarters</li>
+            <li data-role="list-divider">3) {{{i18n_location_headquarters}}}</li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Location Mode</legend>
+                <legend>{{{i18n_location_mode}}}</legend>
                 {{#toggle_choices}}
                 <input type='radio' id='watersupplier-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='watersupplier-toggle-{{name}}'>{{{label}}}</label>
@@ -80,40 +80,40 @@
               <p class='error watersupplier-toggle-errors'></p>
             </li>
             <li>
-              <label for='watersupplier-geometry'>Location</label>
+              <label for='watersupplier-geometry'>{{{i18n_location}}}</label>
               <input type='hidden' data-xform-type='geopoint' name='geometry'>
               <div class="map edit-map" id='watersupplier-{{id}}{{^id}}new{{/id}}-edit-map'></div>
               <p class='error watersupplier-geometry-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-latitude'>Latitude</label>
+              <label for='watersupplier-latitude'>{{{i18n_latitude}}}</label>
               <input id='watersupplier-latitude' type='number' data-xform-type='decimal' name='latitude' step='0.000001' value="{{latitude}}">
               <p class='error watersupplier-latitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-longitude'>Longitude</label>
+              <label for='watersupplier-longitude'>{{{i18n_longitude}}}</label>
               <input id='watersupplier-longitude' type='number' data-xform-type='decimal' name='longitude' step='0.000001' value="{{longitude}}">
               <p class='error watersupplier-longitude-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-accuracy'>GPS Accuracy</label>
+              <label for='watersupplier-accuracy'>{{{i18n_accuracy}}}</label>
               <input id='watersupplier-accuracy' type='number' data-xform-type='decimal' name='accuracy' step='0.000001' value="{{accuracy}}">
               <p class='error watersupplier-accuracy-errors'></p>
             </li>
-            <li data-role="list-divider">4) Water supply</li>
+            <li data-role="list-divider">4) {{{i18n_water_supply}}}</li>
             <li class="ui-field-contain">
-              <label for='watersupplier-bogza'>Bogza (in m³)</label>
+              <label for='watersupplier-bogza'>{{{i18n_bogza}}}</label>
               <input id='watersupplier-bogza' type='number' data-xform-type='decimal' name='bogza' step='0.001' value="{{bogza}}">
               <p class='error watersupplier-bogza-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='watersupplier-mila'>Mila (in m³)</label>
+              <label for='watersupplier-mila'>{{{i18n_mila}}}</label>
               <input id='watersupplier-mila' type='number' data-xform-type='decimal' name='mila' step='0.001' value="{{mila}}">
               <p class='error watersupplier-mila-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Irrigation supply</legend>
+                <legend>{{{i18n_irrigation_supply}}}</legend>
                 {{#irrigation_supply_choices}}
                 <input type='radio' id='watersupplier-irrigation_supply-{{name}}' name='irrigation_supply' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='watersupplier-irrigation_supply-{{name}}'>{{{label}}}</label>
@@ -125,17 +125,17 @@
               <div class="ui-grid-b">
                 <div class="ui-block-a">
                   <a href="{{rt}}/" data-role="button" data-icon="back" data-direction="reverse">
-                    Home
+                    {{{i18n_home}}}
                   </a>
                 </div>
                 <div class="ui-block-b">
                   <a href="{{rt}}/watersuppliers/" data-role="button" data-icon="back" data-direction="reverse">
-                    Show water suppliers
+                    {{{i18n_show_watersuppliers}}}
                   </a>
                 </div>
                 <div class="ui-block-c">
                   <button type="submit" data-icon="check" data-theme="b">
-                    Submit
+                    {{{i18n_submit}}}
                   </button>
                 </div>
               </div>

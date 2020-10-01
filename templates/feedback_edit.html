@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} feedback</title>
+    <title>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_feedback}}}</title>
     {{>head}}
   </head>
   <body>
     <div data-role="page">
       <div data-role="header">
         {{>home}}
-        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} feedback</h1>
+        <h1>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_feedback}}}</h1>
         {{#id}}
         {{#page_config.can_delete}}
         <form action="{{svc}}/feedbacks/{{id}}" method="post" data-ajax="false"
@@ -38,7 +38,7 @@
           <ul data-role="listview" data-inset="true">
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>The application is useful</legend>
+                <legend>{{{i18n_useful}}}</legend>
                 {{#usability_choices}}
                 <input type='radio' id='feedback-usability-{{name}}' name='usability' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-usability-{{name}}'>{{{label}}}</label>
@@ -48,7 +48,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>The application is visually (graphically) attractive</legend>
+                <legend>{{{i18n_attractive}}}</legend>
                 {{#attractiveness_choices}}
                 <input type='radio' id='feedback-attractiveness-{{name}}' name='attractiveness' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-attractiveness-{{name}}'>{{{label}}}</label>
@@ -58,7 +58,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Maps help to use the application</legend>
+                <legend>{{{i18n_maps_helpful}}}</legend>
                 {{#maps_choices}}
                 <input type='radio' id='feedback-maps-{{name}}' name='maps' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-maps-{{name}}'>{{{label}}}</label>
@@ -68,7 +68,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Instruction on how to use the application is easy to understand</legend>
+                <legend>{{{i18n_clear_instruction}}}</legend>
                 {{#clarity_choices}}
                 <input type='radio' id='feedback-clarity-{{name}}' name='clarity' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-clarity-{{name}}'>{{{label}}}</label>
@@ -77,12 +77,12 @@
               <p class='error feedback-clarity-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='feedback-main_attraction'>What was the main attraction?</label>
+              <label for='feedback-main_attraction'>{{{i18n_main_attraction}}}</label>
               <textarea id='feedback-main_attraction' name='main_attraction' data-xform-type="text">{{{main_attraction}}}</textarea>
               <p class='error feedback-main_attraction-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='feedback-other_function'>What other functions should the application have?</label>
+              <label for='feedback-other_function'>{{{i18n_additional_functions}}}</label>
               <textarea id='feedback-other_function' name='other_function' data-xform-type="text">{{{other_function}}}</textarea>
               <p class='error feedback-other_function-errors'></p>
             </li>
@@ -90,17 +90,17 @@
               <div class="ui-grid-b">
                 <div class="ui-block-a">
                   <a href="{{rt}}/" data-role="button" data-icon="back" data-direction="reverse">
-                    Home
+                    {{{i18n_home}}}
                   </a>
                 </div>
                 <div class="ui-block-b">
                   <a href="{{rt}}/feedbacks/" data-role="button" data-icon="back" data-direction="reverse">
-                    Show feedbacks
+                    {{{i18n_show_feedbacks}}}
                   </a>
                 </div>
                 <div class="ui-block-c">
                   <button type="submit" data-icon="check" data-theme="b">
-                    Submit
+                    {{{i18n_submit}}}
                   </button>
                 </div>
               </div>

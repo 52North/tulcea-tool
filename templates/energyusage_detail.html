@@ -22,43 +22,43 @@
           <h1>{{{label}}}</h1>
           <table>
             <tr>
-              <th>What type of energy do you use?</th>
+              <th>{{{i18n_energy_type}}}</th>
               <td>{{{energy_type_label}}}</td>
             </tr>
             <tr>
-              <th>Would you like to use more renewable energy?</th>
+              <th>{{{i18n_more_renewable}}}</th>
               <td>{{{more_renewable_label}}}</td>
             </tr>
             <tr>
-              <th>What type of renewable energy do you use?</th>
+              <th>{{{i18n_type_renewable}}}</th>
               <td>{{{renewable_type_label}}}</td>
             </tr>
             <tr>
-              <th>Location Mode</th>
+              <th>{{{i18n_location_mode}}}</th>
               <td>{{toggle_label}}</td>
             </tr>
             <tr>
-              <th>Latitude</th>
+              <th>{{{i18n_latitude}}}</th>
               <td>{{latitude}}</td>
             </tr>
             <tr>
-              <th>Longitude</th>
+              <th>{{{i18n_longitude}}}</th>
               <td>{{longitude}}</td>
             </tr>
             <tr>
-              <th>GPS Accuracy</th>
+              <th>{{{i18n_accuracy}}}</th>
               <td>{{accuracy}}</td>
             </tr>
           </table>
           <div class="ui-grid-a" style="padding-top: 50px">
             <div class="ui-block-a">
               <a href="{{rt}}/energyusages/" data-role="button" data-icon="bars" data-direction="reverse">
-                Show all energy usages
+                {{{i18n_show_energyusages}}}
               </a>
             </div>
             <div class="ui-block-b">
               <a href="{{rt}}/energyusages/new" data-role="button" data-icon="plus">
-                Add energy usage
+                {{{i18n_add_energyusage}}}
               </a>
             </div>
           </div>

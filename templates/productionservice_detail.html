@@ -22,27 +22,27 @@
           <h1>{{{label}}}</h1>
           <table>
             <tr>
-              <th>Name</th>
+              <th>{{{i18n_name}}}</th>
               <td>{{{name}}}</td>
             </tr>
             <tr>
-              <th>Type</th>
+              <th>{{{i18n_type}}}</th>
               <td>{{{type_label}}}</td>
             </tr>
             <tr>
-              <th>Main product(s)</th>
+              <th>{{{i18n_products}}}</th>
               <td>{{{product}}}</td>
             </tr>
             <tr>
-              <th>Address</th>
+              <th>{{{i18n_address}}}</th>
               <td>{{{address}}}</td>
             </tr>
             <tr>
-              <th>Telephone</th>
+              <th>{{{i18n_telephone}}}</th>
               <td>{{{phone}}}</td>
             </tr>
             <tr>
-              <th>E-mail</th>
+              <th>{{{i18n_email}}}</th>
               <td>{{{email}}}</td>
             </tr>
             <tr>
@@ -50,67 +50,67 @@
               <td>{{{website}}}</td>
             </tr>
             <tr>
-              <th>Location Mode</th>
+              <th>{{{i18n_location_mode}}}</th>
               <td>{{toggle_label}}</td>
             </tr>
             <tr>
-              <th>Latitude</th>
+              <th>{{{i18n_latitude}}}</th>
               <td>{{latitude}}</td>
             </tr>
             <tr>
-              <th>Longitude</th>
+              <th>{{{i18n_longitude}}}</th>
               <td>{{longitude}}</td>
             </tr>
             <tr>
-              <th>GPS Accuracy</th>
+              <th>{{{i18n_accuracy}}}</th>
               <td>{{accuracy}}</td>
             </tr>
             <tr>
-              <th>Source of raw material</th>
+              <th>{{{i18n_source_raw_material}}}</th>
               <td>{{{raw_material}}}</td>
             </tr>
             <tr>
-              <th>Water quantity need (in m³ per month)</th>
+              <th>{{{i18n_water_quantity_month}}}</th>
               <td>{{water_quantity}}</td>
             </tr>
             <tr>
-              <th>Average energy consumption (in kWh per month)</th>
+              <th>{{{i18n_energy_consumption}}}</th>
               <td>{{energy_consumption}}</td>
             </tr>
             <tr>
-              <th>Storage point</th>
+              <th>{{{i18n_storage_point}}}</th>
               <td>{{{storagepoint_label}}}</td>
             </tr>
             <tr>
-              <th>Sale point</th>
+              <th>{{{i18n_sale_point}}}</th>
               <td>{{{salepoint_label}}}</td>
             </tr>
             <tr>
-              <th>Distance: production site → storage → sale point (km)</th>
+              <th>{{{i18n_distance2}}}</th>
               <td>{{distance}}</td>
             </tr>
             <tr>
-              <th>Are the measures taken in the context of limiting COVID-19 infection affecting you?</th>
+              <th>{{{i18n_covid_measures}}}</th>
               <td>{{{covid_affected_label}}}</td>
             </tr>
             <tr>
-              <th>The main effect is</th>
+              <th>{{{i18n_effects}}}</th>
               <td>{{{main_effect_label}}}</td>
             </tr>
             <tr>
-              <th>What is the percentage by which you estimate the decrease in turnover?</th>
+              <th>{{{i18n_turnover_decrease}}}</th>
               <td>{{{turnover_decrease_label}}}</td>
             </tr>
           </table>
           <div class="ui-grid-a" style="padding-top: 50px">
             <div class="ui-block-a">
               <a href="{{rt}}/productionservices/" data-role="button" data-icon="bars" data-direction="reverse">
-                Show all production services
+                {{{i18n_show_production_services}}}
               </a>
             </div>
             <div class="ui-block-b">
               <a href="{{rt}}/productionservices/new" data-role="button" data-icon="plus">
-                Add production service
+                {{{i18n_add_production_service}}}
               </a>
             </div>
           </div>

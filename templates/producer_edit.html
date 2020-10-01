@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} producer</title>
+    <title>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_producer}}}</title>
     {{>head}}
   </head>
   <body>
     <div data-role="page">
       <div data-role="header">
         {{>home}}
-        <h1>{{^id}}Add{{/id}}{{#id}}Edit{{/id}} producer</h1>
+        <h1>{{^id}}{{{i18n_add}}}{{/id}}{{#id}}{{{i18n_edit}}}{{/id}} {{{i18n_producer}}}</h1>
         {{#id}}
         {{#page_config.can_delete}}
         <form action="{{svc}}/producers/{{id}}" method="post" data-ajax="false"
@@ -180,7 +180,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>Use of fertilizer</legend>
+                <legend>{{{i18n_fertilizer_use}}}</legend>
                 {{#fertilizer_choices}}
                 <input type='radio' id='producer-fertilizer-{{name}}' name='fertilizer' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-fertilizer-{{name}}'>{{{label}}}</label>
@@ -189,7 +189,7 @@
               <p class='error producer-fertilizer-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-storagepoint_id'>Storage point</label>
+              <label for='producer-storagepoint_id'>{{{i18n_storage_point}}}</label>
               <select id='producer-storagepoint_id' data-xform-type='string' name='storagepoint_id'>
                 <option value="">Select one...</option>
                 {{#storagepoint_list}}
@@ -201,7 +201,7 @@
               <p class='error producer-storagepoint_id-errors'></p>
             </li>
             <li class="ui-field-contain">
-              <label for='producer-salepoint_id'>Sale point</label>
+              <label for='producer-salepoint_id'>{{{i18n_sale_point}}}</label>
               <select id='producer-salepoint_id' data-xform-type='string' name='salepoint_id'>
                 <option value="">Select one...</option>
                 {{#salepoint_list}}
@@ -221,7 +221,7 @@
                 </div>
                 <div class="ui-block-b">
                   <a href="{{rt}}/producers/" data-role="button" data-icon="back" data-direction="reverse">
-                    Show producers
+                    {{{i18n_show_producers}}}
                   </a>
                 </div>
                 <div class="ui-block-c">
