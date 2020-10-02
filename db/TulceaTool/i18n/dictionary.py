@@ -17,6 +17,11 @@ dict_ro['i18n_welcome_p9'] = 'Pentru explicații mai detaliate despre modul de u
 dict_ro['i18n_welcome_p10'] = 'Aplicația a fost dezvoltată în cooperare cu INCDDD Tulcea. În prezent, testăm prima versiune a aplicației. Împărtășiți-ne părerea dvs. despre aceasta făcând clic pe linkul de feedback din partea de jos a acestei pagini!'
 dict_ro['i18n_welcome_p11'] = 'Explorează!'
 
+dict_ro['i18n_auth_message'] = 'În prezent, acest site web este deschis doar pentru utilizatorii autentificați. Vă rugăm să introduceți numele de utilizator și parola pentru a continua.'
+dict_ro['i18n_username'] = 'Nume de utilizator'
+dict_ro['i18n_password'] = 'Parola'
+dict_ro['i18n_explore_tool'] = 'Explorați aplicația!'
+
 dict_en['i18n_welcome_p1'] = 'Welcome!'
 dict_en['i18n_welcome_p2'] = 'Citizen Science in Tulcea'
 dict_en['i18n_welcome_p3'] = 'We all love food. We all need clean water and energy. With this application you can find information on food, water and energy in Tulcea and by uploading information yourself you can help reseachers to understand how these fields are connected. More concrete, you can find and upload information about:'
@@ -28,6 +33,12 @@ dict_en['i18n_welcome_p8'] = 'energy usage of citizens.'
 dict_en['i18n_welcome_p9'] = 'For more detailed explanation on how to use the application, please check the different topics presented in the navigation at the top of the page.'
 dict_en['i18n_welcome_p10'] = 'The application was developed in cooperation with the Tulcea City. We are currently testing the first version of the application. Share with us your opinion about it by clicking on the feedback link at the bottom of this page!'
 dict_en['i18n_welcome_p11'] = 'Explore!'
+
+dict_en['i18n_auth_message'] = 'Currently, this website is only open for authenticated users. Please insert your username and password to proceed.'
+dict_en['i18n_username'] = 'Username'
+dict_en['i18n_password'] = 'Password'
+dict_en['i18n_explore_tool'] = 'Explore the tool!'
+
 
 # ----------------------------------------------------------------------
 # Navigation bar text
