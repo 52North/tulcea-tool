@@ -39,40 +39,40 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_useful}}}</legend>
-                {{#usability_choices}}
+                {{#i18n_usability_choices}}
                 <input type='radio' id='feedback-usability-{{name}}' name='usability' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-usability-{{name}}'>{{{label}}}</label>
-                {{/usability_choices}}
+                {{/i18n_usability_choices}}
               </fieldset>
               <p class='error feedback-usability-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_attractive}}}</legend>
-                {{#attractiveness_choices}}
+                {{#i18n_attractiveness_choices}}
                 <input type='radio' id='feedback-attractiveness-{{name}}' name='attractiveness' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-attractiveness-{{name}}'>{{{label}}}</label>
-                {{/attractiveness_choices}}
+                {{/i18n_attractiveness_choices}}
               </fieldset>
               <p class='error feedback-attractiveness-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_maps_helpful}}}</legend>
-                {{#maps_choices}}
+                {{#i18n_maps_choices}}
                 <input type='radio' id='feedback-maps-{{name}}' name='maps' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-maps-{{name}}'>{{{label}}}</label>
-                {{/maps_choices}}
+                {{/i18n_maps_choices}}
               </fieldset>
               <p class='error feedback-maps-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_clear_instruction}}}</legend>
-                {{#clarity_choices}}
+                {{#i18n_clarity_choices}}
                 <input type='radio' id='feedback-clarity-{{name}}' name='clarity' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-clarity-{{name}}'>{{{label}}}</label>
-                {{/clarity_choices}}
+                {{/i18n_clarity_choices}}
               </fieldset>
               <p class='error feedback-clarity-errors'></p>
             </li>

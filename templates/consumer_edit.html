@@ -40,10 +40,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_gender}}}</legend>
-                {{#gender_choices}}
+                {{#i18n_gender_choices}}
                 <input type='radio' id='consumer-gender-{{name}}' name='gender' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-gender-{{name}}'>{{{label}}}</label>
-                {{/gender_choices}}
+                {{/i18n_gender_choices}}
               </fieldset>
               <p class='error consumer-gender-errors'></p>
             </li>
@@ -60,10 +60,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_income}}}</legend>
-                {{#income_choices}}
+                {{#i18n_income_choices}}
                 <input type='radio' id='consumer-income-{{name}}' name='income' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-income-{{name}}'>{{{label}}}</label>
-                {{/income_choices}}
+                {{/i18n_income_choices}}
               </fieldset>
               <p class='error consumer-income-errors'></p>
             </li>
@@ -74,40 +74,40 @@
                 <li class="ui-field-contain">
                   <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                     <legend>{{{i18n_big_store}}}</legend>
-                    {{#big_chain_store_choices}}
+                    {{#i18n_big_chain_store_choices}}
                     <input type='radio' id='consumer-big_chain_store-{{name}}' name='big_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
                     <label for='consumer-big_chain_store-{{name}}'>{{{label}}}</label>
-                    {{/big_chain_store_choices}}
+                    {{/i18n_big_chain_store_choices}}
                   </fieldset>
                   <p class='error consumer-big_chain_store-errors'></p>
                 </li>
                 <li class="ui-field-contain">
                   <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                     <legend>{{{i18n_local_store}}}</legend>
-                    {{#local_chain_store_choices}}
+                    {{#i18n_local_chain_store_choices}}
                     <input type='radio' id='consumer-local_chain_store-{{name}}' name='local_chain_store' value='{{name}}'{{#selected}} checked{{/selected}}>
                     <label for='consumer-local_chain_store-{{name}}'>{{{label}}}</label>
-                    {{/local_chain_store_choices}}
+                    {{/i18n_local_chain_store_choices}}
                   </fieldset>
                   <p class='error consumer-local_chain_store-errors'></p>
                 </li>
                 <li class="ui-field-contain">
                   <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                     <legend>{{{i18n_small_shop}}}</legend>
-                    {{#small_shop_choices}}
+                    {{#i18n_small_shop_choices}}
                     <input type='radio' id='consumer-small_shop-{{name}}' name='small_shop' value='{{name}}'{{#selected}} checked{{/selected}}>
                     <label for='consumer-small_shop-{{name}}'>{{{label}}}</label>
-                    {{/small_shop_choices}}
+                    {{/i18n_small_shop_choices}}
                   </fieldset>
                   <p class='error consumer-small_shop-errors'></p>
                 </li>
                 <li class="ui-field-contain">
                   <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                     <legend>{{{i18n_market}}}</legend>
-                    {{#market_choices}}
+                    {{#i18n_market_choices}}
                     <input type='radio' id='consumer-market-{{name}}' name='market' value='{{name}}'{{#selected}} checked{{/selected}}>
                     <label for='consumer-market-{{name}}'>{{{label}}}</label>
-                    {{/market_choices}}
+                    {{/i18n_market_choices}}
                   </fieldset>
                   <p class='error consumer-market-errors'></p>
                 </li>
@@ -116,30 +116,30 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_main_transport}}}</legend>
-                {{#transport_choices}}
+                {{#i18n_transport_choices}}
                 <input type='radio' id='consumer-transport-{{name}}' name='transport' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-transport-{{name}}'>{{{label}}}</label>
-                {{/transport_choices}}
+                {{/i18n_transport_choices}}
               </fieldset>
               <p class='error consumer-transport-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_bio_use}}}</legend>
-                {{#bio_choices}}
+                {{#i18n_bio_choices}}
                 <input type='radio' id='consumer-bio-{{name}}' name='bio' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-bio-{{name}}'>{{{label}}}</label>
-                {{/bio_choices}}
+                {{/i18n_bio_choices}}
               </fieldset>
               <p class='error consumer-bio-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_product_origin}}}</legend>
-                {{#local_choices}}
+                {{#i18n_local_choices}}
                 <input type='radio' id='consumer-local-{{name}}' name='local' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-local-{{name}}'>{{{label}}}</label>
-                {{/local_choices}}
+                {{/i18n_local_choices}}
               </fieldset>
               <p class='error consumer-local-errors'></p>
             </li>
@@ -156,20 +156,20 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_waste_water}}}</legend>
-                {{#waste_water_choices}}
+                {{#i18n_waste_water_choices}}
                 <input type='radio' id='consumer-waste_water-{{name}}' name='waste_water' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-waste_water-{{name}}'>{{{label}}}</label>
-                {{/waste_water_choices}}
+                {{/i18n_waste_water_choices}}
               </fieldset>
               <p class='error consumer-waste_water-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_food_priorization}}}</legend>
-                {{#priorization_choices}}
+                {{#i18n_priorization_choices}}
                 <input type='radio' id='consumer-priorization-{{name}}' name='priorization' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='consumer-priorization-{{name}}'>{{{label}}}</label>
-                {{/priorization_choices}}
+                {{/i18n_priorization_choices}}
               </fieldset>
               <p class='error consumer-priorization-errors'></p>
             </li>

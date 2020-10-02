@@ -39,30 +39,30 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_energy_type}}}</legend>
-                {{#energy_type_choices}}
+                {{#i18n_energy_type_choices}}
                 <input type='radio' id='energyusage-energy_type-{{name}}' class="wq-hide" name='energy_type' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='energyusage-energy_type-{{name}}'>{{{label}}}</label>
-                {{/energy_type_choices}}
+                {{/i18n_energy_type_choices}}
               </fieldset>
               <p class='error energyusage-energy_type-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_more_renewable}}}</legend>
-                {{#more_renewable_choices}}
+                {{#i18n_more_renewable_choices}}
                 <input type='radio' id='energyusage-more_renewable-{{name}}' name='more_renewable' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='energyusage-more_renewable-{{name}}'>{{{label}}}</label>
-                {{/more_renewable_choices}}
+                {{/i18n_more_renewable_choices}}
               </fieldset>
               <p class='error energyusage-more_renewable-errors'></p>
             </li>
             <li class="ui-field-contain wq-renewable-hide" style="display: none;">
               <fieldset data-xform-type='select one' data-role='controlgroup'>
                 <legend>{{{i18n_type_renewable}}}</legend>
-                {{#renewable_type_choices}}
+                {{#i18n_renewable_type_choices}}
                 <input type='radio' id='energyusage-renewable_type-{{name}}' name='renewable_type' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='energyusage-renewable_type-{{name}}'>{{{label}}}</label>
-                {{/renewable_type_choices}}
+                {{/i18n_renewable_type_choices}}
               </fieldset>
               <p class='error energyusage-renewable_type-errors'></p>
             </li>
@@ -72,10 +72,10 @@
             <li class="ui-field-contain wq-renewable-hide" style="display: none;">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_location_mode}}}</legend>
-                {{#toggle_choices}}
+                {{#i18n_toggle_choices}}
                 <input type='radio' id='energyusage-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='energyusage-toggle-{{name}}'>{{{label}}}</label>
-                {{/toggle_choices}}
+                {{/i18n_toggle_choices}}
               </fieldset>
               <p class='error energyusage-toggle-errors'></p>
             </li>

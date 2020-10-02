@@ -45,10 +45,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_type}}}</legend>
-                {{#type_choices}}
+                {{#i18n_type_choices}}
                 <input type='radio' id='producer-type-{{name}}' name='type' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-type-{{name}}'>{{{label}}}</label>
-                {{/type_choices}}
+                {{/i18n_type_choices}}
               </fieldset>
               <p class='error producer-type-errors'></p>
             </li>
@@ -82,10 +82,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_location_mode}}}</legend>
-                {{#toggle_choices}}
+                {{#i18n_toggle_choices}}
                 <input type='radio' id='producer-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-toggle-{{name}}'>{{{label}}}</label>
-                {{/toggle_choices}}
+                {{/i18n_toggle_choices}}
               </fieldset>
               <p class='error producer-toggle-errors'></p>
             </li>
@@ -114,20 +114,20 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_irrigation_use}}}</legend>
-                {{#irrigation_use_choices}}
+                {{#i18n_irrigation_use_choices}}
                 <input type='radio' id='producer-irrigation_use-{{name}}' class="wq-hide" name='irrigation_use' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_use-{{name}}'>{{{label}}}</label>
-                {{/irrigation_use_choices}}
+                {{/i18n_irrigation_use_choices}}
               </fieldset>
               <p class='error producer-irrigation_use-errors'></p>
             </li>
             <li class="ui-field-contain wq-yes-hide">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_irrigation_interest}}}</legend>
-                {{#irrigation_interest_choices}}
+                {{#i18n_irrigation_interest_choices}}
                 <input type='radio' id='producer-irrigation_interest-{{name}}' name='irrigation_interest' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_interest-{{name}}'>{{{label}}}</label>
-                {{/irrigation_interest_choices}}
+                {{/i18n_irrigation_interest_choices}}
               </fieldset>
               <p class='error producer-irrigation_interest-errors'></p>
             </li>
@@ -139,10 +139,10 @@
             <li class="ui-field-contain wq-no-hide">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_water_quality}}}</legend>
-                {{#irrigation_quality_choices}}
+                {{#i18n_irrigation_quality_choices}}
                 <input type='radio' id='producer-irrigation_quality-{{name}}' name='irrigation_quality' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-irrigation_quality-{{name}}'>{{{label}}}</label>
-                {{/irrigation_quality_choices}}
+                {{/i18n_irrigation_quality_choices}}
               </fieldset>
               <p class='error producer-irrigation_quality-errors'></p>
             </li>
@@ -171,20 +171,20 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_uses}}}</legend>
-                {{#use_choices}}
+                {{#i18n_use_choices}}
                 <input type='radio' id='producer-use-{{name}}' name='use' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-use-{{name}}'>{{{label}}}</label>
-                {{/use_choices}}
+                {{/i18n_use_choices}}
               </fieldset>
               <p class='error producer-use-errors'></p>
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_fertilizer_use}}}</legend>
-                {{#fertilizer_choices}}
+                {{#i18n_fertilizer_choices}}
                 <input type='radio' id='producer-fertilizer-{{name}}' name='fertilizer' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='producer-fertilizer-{{name}}'>{{{label}}}</label>
-                {{/fertilizer_choices}}
+                {{/i18n_fertilizer_choices}}
               </fieldset>
               <p class='error producer-fertilizer-errors'></p>
             </li>

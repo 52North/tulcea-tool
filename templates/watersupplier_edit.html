@@ -72,10 +72,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_location_mode}}}</legend>
-                {{#toggle_choices}}
+                {{#i18n_toggle_choices}}
                 <input type='radio' id='watersupplier-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='watersupplier-toggle-{{name}}'>{{{label}}}</label>
-                {{/toggle_choices}}
+                {{/i18n_toggle_choices}}
               </fieldset>
               <p class='error watersupplier-toggle-errors'></p>
             </li>
@@ -114,10 +114,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_irrigation_supply}}}</legend>
-                {{#irrigation_supply_choices}}
+                {{#i18n_irrigation_supply_choices}}
                 <input type='radio' id='watersupplier-irrigation_supply-{{name}}' name='irrigation_supply' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='watersupplier-irrigation_supply-{{name}}'>{{{label}}}</label>
-                {{/irrigation_supply_choices}}
+                {{/i18n_irrigation_supply_choices}}
               </fieldset>
               <p class='error watersupplier-irrigation_supply-errors'></p>
             </li>

@@ -45,10 +45,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_type}}}</legend>
-                {{#type_choices}}
+                {{#i18n_type_choices}}
                 <input type='radio' id='productionservice-type-{{name}}' name='type' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='productionservice-type-{{name}}'>{{{label}}}</label>
-                {{/type_choices}}
+                {{/i18n_type_choices}}
               </fieldset>
               <p class='error productionservice-type-errors'></p>
             </li>
@@ -82,10 +82,10 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_location_mode}}}</legend>
-                {{#toggle_choices}}
+                {{#i18n_toggle_choices}}
                 <input type='radio' id='productionservice-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='productionservice-toggle-{{name}}'>{{{label}}}</label>
-                {{/toggle_choices}}
+                {{/i18n_toggle_choices}}
               </fieldset>
               <p class='error productionservice-toggle-errors'></p>
             </li>
@@ -160,20 +160,20 @@
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
                 <legend>{{{i18n_covid_measures}}}</legend>
-                {{#covid_affected_choices}}
+                {{#i18n_covid_affected_choices}}
                 <input type='radio' id='productionservice-covid_affected-{{name}}' class="wq-hide" name='covid_affected' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='productionservice-covid_affected-{{name}}'>{{{label}}}</label>
-                {{/covid_affected_choices}}
+                {{/i18n_covid_affected_choices}}
               </fieldset>
               <p class='error productionservice-covid_affected-errors'></p>
             </li>
             <li class="ui-field-contain wq-no-hide" style="display: none;">
               <fieldset data-xform-type='select one' data-role='controlgroup'>
                 <legend>{{{i18n_effects}}}</legend>
-                {{#main_effect_choices}}
+                {{#i18n_main_effect_choices}}
                 <input type='radio' id='productionservice-main_effect-{{name}}' name='main_effect' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='productionservice-main_effect-{{name}}'>{{{label}}}</label>
-                {{/main_effect_choices}}
+                {{/i18n_main_effect_choices}}
               </fieldset>
               <p class='error productionservice-main_effect-errors'></p>
             </li>
