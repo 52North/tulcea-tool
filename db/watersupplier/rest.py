@@ -11,7 +11,7 @@ rest.router.register_model(
         'autoZoom' : False,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Water suppliers</span><img style="height: 20px;" src="images/watersupplier.png">',
+            'name': '<span style="padding-right: 5px;">Furnizorilor de apă</span><img style="height: 20px;" src="images/watersupplier.png">',
             'url': 'watersuppliers.geojson',
             'popup': 'watersupplier',
             'icon' : 'watersupplier',
@@ -21,7 +21,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Water suppliers</span><img style="height: 20px;" src="images/watersupplier.png">',
+            'name': '<span style="padding-right: 5px;">Furnizorilor de apă</span><img style="height: 20px;" src="images/watersupplier.png">',
             'url': 'watersuppliers/{{id}}.geojson',
             'popup': 'watersupplier',
             'flatten': True,
@@ -32,7 +32,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Water supplier</span><img style="height: 20px;" src="images/watersupplier.png">',
+            'name': '<span style="padding-right: 5px;">Furnizorilor de apă</span><img style="height: 20px;" src="images/watersupplier.png">',
             'url': 'watersuppliers/{{id}}/edit.geojson',
             'popup': 'watersupplier',
             'geometryField': 'geometry',

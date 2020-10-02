@@ -11,7 +11,7 @@ rest.router.register_model(
         'autoZoom' : False,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Sale points</span><img style="height: 20px;" src="images/salepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de vânzare</span><img style="height: 20px;" src="images/salepoint.png">',
             'url': 'salepoints.geojson',
             'popup': 'salepoint',
             'icon' : 'salepoint',
@@ -21,7 +21,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Sale points</span><img style="height: 20px;" src="images/salepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de vânzare</span><img style="height: 20px;" src="images/salepoint.png">',
             'url': 'salepoints/{{id}}.geojson',
             'popup': 'salepoint',
             'flatten': True,
@@ -32,7 +32,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Sale points</span><img style="height: 20px;" src="images/salepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de vânzare</span><img style="height: 20px;" src="images/salepoint.png">',
             'url': 'salepoints/{{id}}/edit.geojson',
             'popup': 'salepoint',
             'geometryField': 'geometry',

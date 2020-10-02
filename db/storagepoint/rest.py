@@ -11,7 +11,7 @@ rest.router.register_model(
         'autoZoom' : False,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Storage points</span><img style="height: 20px;" src="images/storagepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de depozitare</span><img style="height: 20px;" src="images/storagepoint.png">',
             'url': 'storagepoints.geojson',
             'popup': 'storagepoint',
             'icon' : 'storagepoint',
@@ -21,7 +21,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Storage points</span><img style="height: 20px;" src="images/storagepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de depozitare</span><img style="height: 20px;" src="images/storagepoint.png">',
             'url': 'storagepoints/{{id}}.geojson',
             'popup': 'storagepoint',
             'flatten': True,
@@ -32,7 +32,7 @@ rest.router.register_model(
         'autoZoom' : True,
         'layers': [{
             'type': 'geojson',
-            'name': '<span style="padding-right: 5px;">Storage points</span><img style="height: 20px;" src="images/storagepoint.png">',
+            'name': '<span style="padding-right: 5px;">Puncte de depozitare</span><img style="height: 20px;" src="images/storagepoint.png">',
             'url': 'storagepoints/{{id}}/edit.geojson',
             'popup': 'storagepoint',
             'geometryField': 'geometry',
