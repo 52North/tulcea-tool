@@ -94,29 +94,29 @@ dict_ro['i18n_this_storage_point'] = 'Acest punct de stocare'
 dict_ro['i18n_all_storage_points'] = 'Toate puncte de stocare'
 dict_ro['i18n_add_producer'] = 'Adaugă producător'
 dict_ro['i18n_producer_list'] = 'Lista producătorilor'
-dict_ro['i18n_show_producers'] = 'Arată producătorilor'
+dict_ro['i18n_show_producers'] = 'Arată producătorii'
 dict_ro['i18n_this_producer'] = 'Acest producător'
 dict_ro['i18n_all_producers'] = 'Toate producătorilor'
 dict_ro['i18n_producer'] = 'producător'
 dict_ro['i18n_add_production_service'] = 'Adaugă servicii de producție'
 dict_ro['i18n_production_service_list'] = 'Lista serviciilor de producție'
-dict_ro['i18n_show_production_services'] = 'Arată serviciilor de producție'
+dict_ro['i18n_show_production_services'] = 'Arată serviciile de producție'
 dict_ro['i18n_this_production_service'] = 'Acest servicii de producție'
 dict_ro['i18n_all_production_services'] = 'Toate serviciilor de producție'
 dict_ro['i18n_production_service'] = 'servicii de producție'
 dict_ro['i18n_add_consumer'] = 'Adaugă consumator'
 dict_ro['i18n_consumer_list'] = 'Lista consumatorilor'
-dict_ro['i18n_show_consumers'] = 'Arată consumatorilor'
+dict_ro['i18n_show_consumers'] = 'Arată lista consumatorilor înregistrați'
 dict_ro['i18n_consumer'] = 'consumator'
 dict_ro['i18n_add_watersupplier'] = 'Adaugă furnizor de apă'
 dict_ro['i18n_watersupplier_list'] = 'Lista furnizorilor de apă'
-dict_ro['i18n_show_watersuppliers'] = 'Arată furnizorilor de apă'
+dict_ro['i18n_show_watersuppliers'] = 'Arată lista furnizorilor de apă'
 dict_ro['i18n_this_watersupplier'] = 'Acest furnizor de apă'
 dict_ro['i18n_all_watersuppliers'] = 'Toate furnizorilor de apă'
 dict_ro['i18n_watersupplier'] = 'furnizor de apă'
 dict_ro['i18n_add_energyusage'] = 'Adăugați consumul de energie'
 dict_ro['i18n_energyusage_list'] = 'Lista consumurilor de energie'
-dict_ro['i18n_show_energyusages'] = 'Arată consumurilor de energie'
+dict_ro['i18n_show_energyusages'] = 'Arată lista consumurilor de energie'
 dict_ro['i18n_this_energyusage'] = 'Acest consumul de energie'
 dict_ro['i18n_all_energyusages'] = 'Toate consumurilor de energie'
 dict_ro['i18n_energyusage'] = 'consumul de energie'
@@ -222,7 +222,7 @@ dict_ro['i18n_water_quality'] = 'Calitatea apei'
 dict_ro['i18n_irrigation_quality_choices'] = [{'name': "source", 'label': "Din sursă"}, {'name': "underground",'label': "Apă subterană"}]
 dict_ro['i18n_from_source'] = 'Din sursă'
 dict_ro['i18n_undeground_water'] = 'Apă subterană'
-dict_ro['i18n_irrigation_interest'] = 'Aveți interes să folosești apa pentru irigații?'
+dict_ro['i18n_irrigation_interest'] = 'Sunteți interesat de folosirea unui sistem de irigații?'
 dict_ro['i18n_irrigation_interest_choices'] = [{'name': "yes", 'label': "Da"}, {'name': "no",'label': "Nu"}]
 dict_ro['i18n_electrical_consumption'] = 'Consum mediu de electricitate (în kWh pe an)'
 dict_ro['i18n_distance'] = 'Distanța: producție-depozitare-punct de vânzare'
@@ -363,7 +363,7 @@ dict_en['i18n_irrigation_supply_choices'] = [{'name': "source", 'label': "From s
 
 dict_ro['i18n_energy_type'] = 'Ce tip de energie folosiți?'
 dict_ro['i18n_energy_type_choices'] = [{'name': "national", 'label': "Sistem Național"}, {'name': "renewable",'label': "Regenerabilă"}, {'name': "both", 'label': "Amândouă"}]
-dict_ro['i18n_more_renewable'] = 'Vați dori să folosiți mai multă energie regenerabilă?'
+dict_ro['i18n_more_renewable'] = 'V-ați dori să folosiți mai multă energie regenerabilă?'
 dict_ro['i18n_more_renewable_choices'] = [{'name': "yes", 'label': "Da"}, {'name': "no",'label': "Nu"}]
 dict_ro['i18n_type_renewable'] = 'Ce tip de energie regenerabilă folosiți?'
 dict_ro['i18n_renewable_type_choices'] = [{'name': "solar", 'label': "Solar"}, {'name': "wind",'label': "Vânt"}, {'name': "water", 'label': "Apă"}, {'name': "geothermal", 'label': "Geotermală"}, {'name': "bio", 'label': "Bio"}, {'name': "other", 'label': "Alte"}]
@@ -402,6 +402,10 @@ dict_en['i18n_clarity_choices'] = [{'name': "strong_agree", 'label': "I strongly
 dict_en['i18n_main_attraction'] = 'What was the main attraction?'
 dict_en['i18n_additional_functions'] = 'What other functions should the application have?'
 
+# ----------------------------------------------------------------------
+
+dict_ro['i18n_select'] = 'Selectați...',
+dict_en['i18n_select'] = 'Select one...',
 
 
 # ----------------------------------------------------------------------

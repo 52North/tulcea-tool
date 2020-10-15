@@ -129,7 +129,7 @@
             <li class="ui-field-contain">
               <label for='productionservice-storagepoint_id'>{{{i18n_storage_point}}}</label>
               <select id='productionservice-storagepoint_id' data-xform-type='string' name='storagepoint_id'>
-                <option value="">Select one...</option>
+                <option value="">{{{i18n_select}}}</option>
                 {{#storagepoint_list}}
                 <option value="{{id}}"{{#selected}} selected{{/selected}}>
                  {{#outbox}}*{{/outbox}} {{{label}}}
@@ -141,7 +141,7 @@
             <li class="ui-field-contain">
               <label for='productionservice-salepoint_id'>{{{i18n_sale_point}}}</label>
               <select id='productionservice-salepoint_id' data-xform-type='string' name='salepoint_id'>
-                <option value="">Select one...</option>
+                <option value="">{{{i18n_select}}}</option>
                 {{#salepoint_list}}
                 <option value="{{id}}"{{#selected}} selected{{/selected}}>
                  {{#outbox}}*{{/outbox}} {{{label}}}

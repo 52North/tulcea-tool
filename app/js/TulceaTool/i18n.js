@@ -179,6 +179,7 @@ var dict = {
     'i18n_clarity_choices': [{'name': "strong_agree", 'label': "I strongly agree"}, {'name': "rather_agree",'label': "I&#x27;d rather agree"}, {'name': "undecided",'label': "Neither disagree nor agree"}, {'name': "rather_disagree",'label': "I&#x27;d rather disagree"}, {'name': "strong_disagree",'label': "I strongly disagree"}],
     'i18n_main_attraction': 'What was the main attraction?',
     'i18n_additional_functions': 'What other functions should the application have?',
+    'i18n_select': 'Select one...',
   },
   'ro': {
     'i18n_welcome_p1': 'Bine ați venit!',
@@ -225,29 +226,29 @@ var dict = {
     'i18n_all_storage_points': 'Toate puncte de stocare',
     'i18n_add_producer': 'Adaugă producător',
     'i18n_producer_list': 'Lista producătorilor',
-    'i18n_show_producers': 'Arată producătorilor',
+    'i18n_show_producers': 'Arată producătorii',
     'i18n_this_producer': 'Acest producător',
     'i18n_all_producers': 'Toate producătorilor',
     'i18n_producer': 'producător',
     'i18n_add_production_service': 'Adaugă servicii de producție',
     'i18n_production_service_list': 'Lista serviciilor de producție',
-    'i18n_show_production_services': 'Arată serviciilor de producție',
+    'i18n_show_production_services': 'Arată serviciile de producție',
     'i18n_this_production_service': 'Acest servicii de producție',
     'i18n_all_production_services': 'Toate serviciilor de producție',
     'i18n_production_service': 'servicii de producție',
     'i18n_add_consumer': 'Adaugă consumator',
     'i18n_consumer_list': 'Lista consumatorilor',
-    'i18n_show_consumers': 'Arată consumatorilor',
+    'i18n_show_consumers': 'Arată lista consumatorilor înregistrați',
     'i18n_consumer': 'consumator',
     'i18n_add_watersupplier': 'Adaugă furnizor de apă',
     'i18n_watersupplier_list': 'Lista furnizorilor de apă',
-    'i18n_show_watersuppliers': 'Arată furnizorilor de apă',
+    'i18n_show_watersuppliers': 'Arată lista furnizorilor de apă',
     'i18n_this_watersupplier': 'Acest furnizor de apă',
     'i18n_all_watersuppliers': 'Toate furnizorilor de apă',
     'i18n_watersupplier': 'furnizor de apă',
     'i18n_add_energyusage': 'Adăugați consumul de energie',
     'i18n_energyusage_list': 'Lista consumurilor de energie',
-    'i18n_show_energyusages': 'Arată consumurilor de energie',
+    'i18n_show_energyusages': 'Arată lista consumurilor de energie',
     'i18n_this_energyusage': 'Acest consumul de energie',
     'i18n_all_energyusages': 'Toate consumurilor de energie',
     'i18n_energyusage': 'consumul de energie',
@@ -280,7 +281,7 @@ var dict = {
     'i18n_water_quantity': 'Cantitatea de apă (în m³ pe an)',
     'i18n_water_quality': 'Calitatea apei',
     'i18n_irrigation_quality_choices': [{'name': "source", 'label': "Din sursă"}, {'name': "underground",'label': "Apă subterană"}],
-    'i18n_irrigation_interest': 'Aveți interes să folosești apa pentru irigații?',
+    'i18n_irrigation_interest': 'Sunteți interesat de folosirea unui sistem de irigații?',
     'i18n_irrigation_interest_choices': [{'name': "yes", 'label': "Da"}, {'name': "no",'label': "Nu"}],
     'i18n_electrical_consumption': 'Consum mediu de electricitate (în kWh pe an)',
     'i18n_distance': 'Distanța: producție-depozitare-punct de vânzare',
@@ -337,7 +338,7 @@ var dict = {
     'i18n_irrigation_supply_choices': [{'name': "source", 'label': "Din sursă"}, {'name': "underground",'label': "Apă subterană"}],
     'i18n_energy_type': 'Ce tip de energie folosiți?',
     'i18n_energy_type_choices': [{'name': "national", 'label': "Sistem Național"}, {'name': "renewable",'label': "Regenerabilă"}, {'name': "both", 'label': "Amândouă"}],
-    'i18n_more_renewable': 'Vați dori să folosiți mai multă energie regenerabilă?',
+    'i18n_more_renewable': 'V-ați dori să folosiți mai multă energie regenerabilă?',
     'i18n_more_renewable_choices': [{'name': "yes", 'label': "Da"}, {'name': "no",'label': "Nu"}],
     'i18n_type_renewable': 'Ce tip de energie regenerabilă folosiți?',
     'i18n_renewable_type_choices': [{'name': "solar", 'label': "Solar"}, {'name': "wind",'label': "Vânt"}, {'name': "water", 'label': "Apă"}, {'name': "geothermal", 'label': "Geotermală"}, {'name': "bio", 'label': "Bio"}, {'name': "other", 'label': "Alte"}],
@@ -352,6 +353,7 @@ var dict = {
     'i18n_clarity_choices': [{'name': "strong_agree", 'label': "Total de acord"}, {'name': "rather_agree",'label': "De acord"}, {'name': "undecided",'label': "Indecis"}, {'name': "rather_disagree",'label': "Nu sunt de acord"}, {'name': "strong_disagree",'label': "Dezacord total"}],
     'i18n_main_attraction': 'Care a fost principala atracție?',
     'i18n_additional_functions': 'Ce alte funcții ar trebui incluse în aplicație?',
+    'i18n_select': 'Selectați...',
   }
 };
 
@@ -376,6 +378,8 @@ i18n.init = function (config) {
       } else {
         this.language = 'ro';                     // fall-back language, should be equal to LANGUAGE_CODE in base.py for consistency
       }
+    } else if (lang != 'en' && lang != 'ro') {
+      this.language = 'ro';
     } else {
       this.language = lang;
     }
