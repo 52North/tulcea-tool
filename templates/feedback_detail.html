@@ -11,7 +11,7 @@
         <h1>{{{label}}}</h1>
         {{#page_config.can_change}}
         <a href="{{rt}}/feedbacks/{{id}}/edit" data-icon="edit" data-transition="flip">
-          Edit
+          {{{i18n_edit}}}
         </a>
         {{/page_config.can_change}}
       </div>
@@ -20,28 +20,76 @@
           <h1>{{{label}}}</h1>
           <table>
             <tr>
-              <th>{{{i18n_useful}}}</th>
+              <th>{{{i18n_useful_info1}}}</th>
+              <td>{{rank_info_menu}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_info2}}}</th>
+              <td>{{rank_info_product}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_info3}}}</th>
+              <td>{{rank_info_producer}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_info4}}}</th>
+              <td>{{rank_info_place_of_origin}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_info5}}}</th>
+              <td>{{rank_info_meal_rating}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_info6}}}</th>
+              <td>{{rank_info_private_dish}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature1}}}</th>
+              <td>{{rank_feature_see_menu}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature2}}}</th>
+              <td>{{rank_feature_see_producer}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature3}}}</th>
+              <td>{{rank_feature_see_product}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature4}}}</th>
+              <td>{{rank_feature_add_rating}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature5}}}</th>
+              <td>{{rank_feature_add_private_dish}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_useful_feature6}}}</th>
+              <td>{{rank_feature_add_producer}}</td>
+            </tr>
+            <tr>
+              <th>{{{i18n_tech_aspect1}}}</th>
               <td>{{{usability_label}}}</td>
             </tr>
             <tr>
-              <th>{{{i18n_attractive}}}</th>
+              <th>{{{i18n_tech_aspect2}}}</th>
               <td>{{{attractiveness_label}}}</td>
             </tr>
             <tr>
-              <th>{{{i18n_maps_helpful}}}</th>
+              <th>{{{i18n_tech_aspect3}}}</th>
               <td>{{{maps_label}}}</td>
             </tr>
             <tr>
-              <th>{{{i18n_clear_instruction}}}</th>
+              <th>{{{i18n_tech_aspect4}}}</th>
               <td>{{{clarity_label}}}</td>
             </tr>
             <tr>
-              <th>{{{i18n_main_attraction}}}</th>
-              <td>{{{main_attraction}}}</td>
+              <th>{{{i18n_data_usefulness_question}}}</th>
+              <td>{{{usefulness_label}}}</td>
             </tr>
             <tr>
               <th>{{{i18n_additional_functions}}}</th>
-              <td>{{{other_function}}}</td>
+              <td>{{{comment}}}</td>
             </tr>
           </table>
           <div class="ui-grid-a" style="padding-top: 50px">

@@ -36,9 +36,81 @@
           <input type=hidden name="_method" value="PUT">
           {{/id}}
           <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">1) {{{i18n_information}}}</li>
+            <li>
+              <p style="font-size: 1em">{{{i18n_useful_info_question}}}</p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_menu'>{{{i18n_useful_info1}}}</label>
+              <input id='feedback-rank_info_menu' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_menu' value="{{rank_info_menu}}">
+              <p class='error feedback-rank_info_menu-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_product'>{{{i18n_useful_info2}}}</label>
+              <input id='feedback-rank_info_product' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_product' value="{{rank_info_product}}">
+              <p class='error feedback-rank_info_product-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_producer'>{{{i18n_useful_info3}}}</label>
+              <input id='feedback-rank_info_producer' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_producer' value="{{rank_info_producer}}">
+              <p class='error feedback-rank_info_producer-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_place_of_origin'>{{{i18n_useful_info4}}}</label>
+              <input id='feedback-rank_info_place_of_origin' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_place_of_origin' value="{{rank_info_place_of_origin}}">
+              <p class='error feedback-rank_info_place_of_origin-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_meal_rating'>{{{i18n_useful_info5}}}</label>
+              <input id='feedback-rank_info_meal_rating' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_meal_rating' value="{{rank_info_meal_rating}}">
+              <p class='error feedback-rank_info_meal_rating-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_info_private_dish'>{{{i18n_useful_info6}}}</label>
+              <input id='feedback-rank_info_private_dish' type='number' min='1' max='6' data-xform-type='integer' name='rank_info_private_dish' value="{{rank_info_private_dish}}">
+              <p class='error feedback-rank_info_private_dish-errors'></p>
+            </li>
+            <li data-role="list-divider">2) {{{i18n_features}}}</li>
+            <li>
+              <p style="font-size: 1em">{{{i18n_useful_features_question}}}</p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_see_menu'>{{{i18n_useful_feature1}}}</label>
+              <input id='feedback-rank_feature_see_menu' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_see_menu' value="{{rank_feature_see_menu}}">
+              <p class='error feedback-rank_feature_see_menu-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_see_producer'>{{{i18n_useful_feature2}}}</label>
+              <input id='feedback-rank_feature_see_producer' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_see_producer' value="{{rank_feature_see_producer}}">
+              <p class='error feedback-rank_feature_see_producer-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_see_product'>{{{i18n_useful_feature3}}}</label>
+              <input id='feedback-rank_feature_see_product' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_see_product' value="{{rank_feature_see_product}}">
+              <p class='error feedback-rank_feature_see_product-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_add_rating'>{{{i18n_useful_feature4}}}</label>
+              <input id='feedback-rank_feature_add_rating' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_add_rating' value="{{rank_feature_add_rating}}">
+              <p class='error feedback-rank_feature_add_rating-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_add_private_dish'>{{{i18n_useful_feature5}}}</label>
+              <input id='feedback-rank_feature_add_private_dish' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_add_private_dish' value="{{rank_feature_add_private_dish}}">
+              <p class='error feedback-rank_feature_add_private_dish-errors'></p>
+            </li>
+            <li class="ui-field-contain">
+              <label for='feedback-rank_feature_add_producer'>{{{i18n_useful_feature6}}}</label>
+              <input id='feedback-rank_feature_add_producer' type='number' min='1' max='6' data-xform-type='integer' name='rank_feature_add_producer' value="{{rank_feature_add_producer}}">
+              <p class='error feedback-rank_feature_add_producer-errors'></p>
+            </li>
+            <li data-role="list-divider">3) {{{i18n_tech_aspects_heading}}}</li>
+            <li>
+              <p style="font-size: 1em">{{{i18n_tech_aspects_question}}}</p>
+            </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>{{{i18n_useful}}}</legend>
+                <legend>{{{i18n_tech_aspect1}}}</legend>
                 {{#i18n_usability_choices}}
                 <input type='radio' id='feedback-usability-{{name}}' name='usability' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-usability-{{name}}'>{{{label}}}</label>
@@ -48,7 +120,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>{{{i18n_attractive}}}</legend>
+                <legend>{{{i18n_tech_aspect2}}}</legend>
                 {{#i18n_attractiveness_choices}}
                 <input type='radio' id='feedback-attractiveness-{{name}}' name='attractiveness' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-attractiveness-{{name}}'>{{{label}}}</label>
@@ -58,7 +130,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>{{{i18n_maps_helpful}}}</legend>
+                <legend>{{{i18n_tech_aspect3}}}</legend>
                 {{#i18n_maps_choices}}
                 <input type='radio' id='feedback-maps-{{name}}' name='maps' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-maps-{{name}}'>{{{label}}}</label>
@@ -68,7 +140,7 @@
             </li>
             <li class="ui-field-contain">
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
-                <legend>{{{i18n_clear_instruction}}}</legend>
+                <legend>{{{i18n_tech_aspect4}}}</legend>
                 {{#i18n_clarity_choices}}
                 <input type='radio' id='feedback-clarity-{{name}}' name='clarity' value='{{name}}'{{#selected}} checked{{/selected}}>
                 <label for='feedback-clarity-{{name}}'>{{{label}}}</label>
@@ -76,16 +148,24 @@
               </fieldset>
               <p class='error feedback-clarity-errors'></p>
             </li>
+            <li data-role="list-divider">4) {{{i18n_data_usefulness_heading}}}</li>
             <li class="ui-field-contain">
-              <label for='feedback-main_attraction'>{{{i18n_main_attraction}}}</label>
-              <textarea id='feedback-main_attraction' name='main_attraction' data-xform-type="text">{{{main_attraction}}}</textarea>
-              <p class='error feedback-main_attraction-errors'></p>
+              <fieldset data-xform-type='select one' data-role='controlgroup' data-type='vertical'>
+                <legend>{{{i18n_data_usefulness_question}}}</legend>
+                {{#i18n_data_usefulness_choices}}
+                <input type='radio' id='feedback-usefulness-{{name}}' name='usefulness' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <label for='feedback-usefulness-{{name}}'>{{{label}}}</label>
+                {{/i18n_data_usefulness_choices}}
+              </fieldset>
+              <p class='error feedback-usefulness-errors'></p>
             </li>
+            <li data-role="list-divider">5) {{{i18n_feedback_comment}}}</li>
             <li class="ui-field-contain">
-              <label for='feedback-other_function'>{{{i18n_additional_functions}}}</label>
-              <textarea id='feedback-other_function' name='other_function' data-xform-type="text">{{{other_function}}}</textarea>
-              <p class='error feedback-other_function-errors'></p>
+              <label for='feedback-comment'>{{{i18n_additional_functions}}}</label>
+              <textarea id='feedback-comment' name='comment' data-xform-type="text">{{comment}}</textarea>
+              <p class='error feedback-comment-errors'></p>
             </li>
+
             <li>
               <div class="ui-grid-b">
                 <div class="ui-block-a">
