@@ -5,6 +5,7 @@ from .models import Productionservice
 rest.router.register_model(
     Productionservice,
     fields="__all__",
+    cache="all",
     locate=True,
     map=[{
         'mode': 'list',

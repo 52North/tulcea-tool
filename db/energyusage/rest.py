@@ -5,6 +5,7 @@ from .models import Energyusage
 rest.router.register_model(
     Energyusage,
     fields="__all__",
+    cache="all",
     locate=True,
     map=[{
         'mode': 'list',

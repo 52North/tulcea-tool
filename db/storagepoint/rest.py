@@ -5,6 +5,7 @@ from .models import Storagepoint
 rest.router.register_model(
     Storagepoint,
     fields="__all__",
+    cache="all",
     locate=True,
     map=[{
         'mode': 'list',

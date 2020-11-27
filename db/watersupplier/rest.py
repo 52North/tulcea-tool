@@ -5,6 +5,7 @@ from .models import Watersupplier
 rest.router.register_model(
     Watersupplier,
     fields="__all__",
+    cache="all",
     locate=True,
     map=[{
         'mode': 'list',

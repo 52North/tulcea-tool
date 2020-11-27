@@ -5,6 +5,7 @@ from .models import Salepoint
 rest.router.register_model(
     Salepoint,
     fields="__all__",
+    cache="all",
     locate=True,
     map=[{
         'mode': 'list',

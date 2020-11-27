@@ -5,4 +5,5 @@ from .models import Consumer
 rest.router.register_model(
     Consumer,
     fields="__all__",
+    cache="all",
 )
