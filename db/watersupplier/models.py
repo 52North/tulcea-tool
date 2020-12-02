@@ -35,9 +35,9 @@ class Watersupplier(models.Model):
     )
     toggle = models.CharField(
         choices=(
-            ("gps", "Use GPS"),
-            ("interactive", "Point on Map"),
-            ("manual", "Enter Manually"),
+            ("gps", "Folosește GPS / Use GPS"),
+            ("interactive", "Punct pe hartă / Point on Map"),
+            ("manual", "Introducere manuală / Enter Manually"),
         ),
         max_length=11,
         null=True,
@@ -77,8 +77,10 @@ class Watersupplier(models.Model):
     )
     irrigation_supply = models.CharField(
         choices=(
-            ("source", "From source"),
-            ("underground", "Underground water"),
+            ("source_en", "From source"),
+            ("underground_en", "Underground water"),
+            ("source_ro", "Din sursă"),
+            ("underground_ro", "Apă subterană"),
         ),
         max_length=11,
         null=True,

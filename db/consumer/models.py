@@ -4,8 +4,10 @@ from django.db import models
 class Consumer(models.Model):
     gender = models.CharField(
         choices=(
-            ("male", "Male"),
-            ("female", "Female"),
+            ("male_en", "Male"),
+            ("female_en", "Female"),
+            ("male_ro", "Masculin"),
+            ("female_ro", "Feminin"),
         ),
         max_length=6,
         null=True,
@@ -26,9 +28,12 @@ class Consumer(models.Model):
     )
     income = models.CharField(
         choices=(
-            ("less_1500", "&lt; 1500 / family member"),
-            ("more_1500", "&gt; 1500 / family member"),
-            ("na", "NA"),
+            ("less_1500_en", "&lt; 1500 / family member"),
+            ("more_1500_en", "&gt; 1500 / family member"),
+            ("na_en", "No answer"),
+            ("less_1500_ro", "Sub 1500/per membru de familie"),
+            ("more_1500_ro", "Peste 1500/per membru de familie"),
+            ("na_ro", "Nu doresc sa răspund"),
         ),
         max_length=9,
         null=True,
@@ -37,9 +42,12 @@ class Consumer(models.Model):
     )
     big_chain_store = models.CharField(
         choices=(
-            ("1", "1"),
-            ("3", "ca. 3"),
-            ("more", "More"),
+            ("1_en", "1"),
+            ("3_en", "ca. 3"),
+            ("more_en", "More"),
+            ("1_ro", "1"),
+            ("3_ro", "cca 3"),
+            ("more_ro", "Mai multe"),
         ),
         max_length=4,
         null=True,
@@ -48,9 +56,12 @@ class Consumer(models.Model):
     )
     local_chain_store = models.CharField(
         choices=(
-            ("1", "1"),
-            ("3", "ca. 3"),
-            ("more", "More"),
+            ("1_en", "1"),
+            ("3_en", "ca. 3"),
+            ("more_en", "More"),
+            ("1_ro", "1"),
+            ("3_ro", "cca 3"),
+            ("more_ro", "Mai multe"),
         ),
         max_length=4,
         null=True,
@@ -59,9 +70,12 @@ class Consumer(models.Model):
     )
     small_shop = models.CharField(
         choices=(
-            ("1", "1"),
-            ("3", "ca. 3"),
-            ("more", "More"),
+            ("1_en", "1"),
+            ("3_en", "ca. 3"),
+            ("more_en", "More"),
+            ("1_ro", "1"),
+            ("3_ro", "cca 3"),
+            ("more_ro", "Mai multe"),
         ),
         max_length=4,
         null=True,
@@ -70,9 +84,12 @@ class Consumer(models.Model):
     )
     market = models.CharField(
         choices=(
-            ("1", "1"),
-            ("3", "ca. 3"),
-            ("more", "More"),
+            ("1_en", "1"),
+            ("3_en", "ca. 3"),
+            ("more_en", "More"),
+            ("1_ro", "1"),
+            ("3_ro", "cca 3"),
+            ("more_ro", "Mai multe"),
         ),
         max_length=4,
         null=True,
@@ -81,10 +98,14 @@ class Consumer(models.Model):
     )
     transport = models.CharField(
         choices=(
-            ("car", "Personal car"),
-            ("public", "Public transport"),
-            ("bike", "By bike"),
-            ("foot", "By foot"),
+            ("car_en", "Personal car"),
+            ("public_en", "Public transport"),
+            ("bike_en", "By bike"),
+            ("foot_en", "By foot"),
+            ("car_ro", "Auto personal"),
+            ("public_ro", "Transport public"),
+            ("bike_ro", "Bicicletă"),
+            ("foot_ro", "Pedestru"),
         ),
         max_length=6,
         null=True,
@@ -93,9 +114,12 @@ class Consumer(models.Model):
     )
     bio = models.CharField(
         choices=(
-            ("frequently", "Frequently"),
-            ("sometimes", "Sometimes"),
-            ("no_use", "No use"),
+            ("frequently_en", "Frequently"),
+            ("sometimes_en", "Sometimes"),
+            ("no_use_en", "No use"),
+            ("frequently_ro", "Frecvent"),
+            ("sometimes_ro", "Uneori"),
+            ("no_use_ro", "Niciodata"),
         ),
         max_length=10,
         null=True,
@@ -104,9 +128,12 @@ class Consumer(models.Model):
     )
     local = models.CharField(
         choices=(
-            ("frequently", "Frequently"),
-            ("sometimes", "Sometimes"),
-            ("no_use", "No use"),
+            ("frequently_en", "Frequently"),
+            ("sometimes_en", "Sometimes"),
+            ("no_use_en", "No use"),
+            ("frequently_ro", "Frecvent"),
+            ("sometimes_ro", "Uneori"),
+            ("no_use_ro", "Niciodata"),
         ),
         max_length=10,
         null=True,
@@ -125,9 +152,12 @@ class Consumer(models.Model):
     )
     waste_water = models.CharField(
         choices=(
-            ("sewage", "Sewage system"),
-            ("septic", "Septic tanks"),
-            ("no_treatment", "No treatment at all"),
+            ("sewage_en", "Sewage system"),
+            ("septic_en", "Septic tanks"),
+            ("no_treatment_en", "No treatment at all"),
+            ("sewage_ro", "Sistem centralizat de canalizare"),
+            ("septic_ro", "Fosă septică"),
+            ("no_treatment_ro", "Nici unul"),
         ),
         max_length=12,
         null=True,
@@ -136,10 +166,14 @@ class Consumer(models.Model):
     )
     priorization = models.CharField(
         choices=(
-            ("price", "Price"),
-            ("ecological_impact", "Ecological impact"),
-            ("aquisition_time", "Time for aquisition"),
-            ("health_impact", "Health impact"),
+            ("price_en", "Price"),
+            ("ecological_impact_en", "Ecological impact"),
+            ("aquisition_time_en", "Time for aquisition"),
+            ("health_impact_en", "Health impact"),
+            ("price_ro", "Prețul"),
+            ("ecological_impact_ro", "Impactul ecologic"),
+            ("aquisition_time_ro", "Timpul consumat pentru cumpărături (distanța până la magazin)"),
+            ("health_impact_ro", "Impactul asupra sănătății"),
         ),
         max_length=17,
         null=True,

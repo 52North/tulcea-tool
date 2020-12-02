@@ -4,9 +4,12 @@ from django.contrib.gis.db import models
 class Energyusage(models.Model):
     energy_type = models.CharField(
         choices=(
-            ("national", "National system"),
-            ("renewable", "Renewable"),
-            ("both", "Both"),
+            ("national_en", "National system"),
+            ("renewable_en", "Renewable"),
+            ("both_en", "Both"),
+            ("national_ro", "Sistem Național"),
+            ("renewable_ro", "Regenerabilă"),
+            ("both_ro", "Amândouă"),
         ),
         max_length=9,
         null=True,
@@ -15,8 +18,10 @@ class Energyusage(models.Model):
     )
     more_renewable = models.CharField(
         choices=(
-            ("yes", "Yes"),
-            ("no", "No"),
+            ("yes_en", "Yes"),
+            ("no_en", "No"),
+            ("yes_ro", "Da"),
+            ("no_ro", "Nu"),
         ),
         max_length=3,
         null=True,
@@ -25,12 +30,18 @@ class Energyusage(models.Model):
     )
     renewable_type = models.CharField(
         choices=(
-            ("solar", "Solar"),
-            ("wind", "Wind"),
-            ("water", "Water"),
-            ("geothermal", "Geothermal"),
-            ("bio", "Bio"),
-            ("other", "Other"),
+            ("solar_en", "Solar"),
+            ("wind_en", "Wind"),
+            ("water_en", "Water"),
+            ("geothermal_en", "Geothermal"),
+            ("bio_en", "Bio"),
+            ("other_en", "Other"),
+            ("solar_ro", "Solar"),
+            ("wind_ro", "Vânt"),
+            ("water_ro", "Apă"),
+            ("geothermal_ro", "Geotermală"),
+            ("bio_ro", "Bio"),
+            ("other_ro", "Alte"),
         ),
         max_length=10,
         null=True,
@@ -39,9 +50,9 @@ class Energyusage(models.Model):
     )
     toggle = models.CharField(
         choices=(
-            ("gps", "Use GPS"),
-            ("interactive", "Point on Map"),
-            ("manual", "Enter Manually"),
+            ("gps", "Folosește GPS / Use GPS"),
+            ("interactive", "Punct pe hartă / Point on Map"),
+            ("manual", "Introducere manuală / Enter Manually"),
         ),
         max_length=11,
         null=True,

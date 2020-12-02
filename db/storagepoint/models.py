@@ -40,9 +40,9 @@ class Storagepoint(models.Model):
     )
     toggle = models.CharField(
         choices=(
-            ("gps", "Use GPS"),
-            ("interactive", "Point on Map"),
-            ("manual", "Enter Manually"),
+            ("gps", "Folosește GPS / Use GPS"),
+            ("interactive", "Punct pe hartă / Point on Map"),
+            ("manual", "Introducere manuală / Enter Manually"),
         ),
         max_length=11,
         null=True,

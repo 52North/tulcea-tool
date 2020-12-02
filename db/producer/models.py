@@ -10,9 +10,12 @@ class Producer(models.Model):
     )
     type = models.CharField(
         choices=(
-            ("certificate", "Certificate of producer"),
-            ("small_company", "Small company"),
-            ("small_gardening", "Small gardening"),
+            ("certificate_en", "Certificate of producer"),
+            ("small_company_en", "Small company"),
+            ("small_gardening_en", "Small gardening"),
+            ("certificate_ro", "Deținător de certificat de producător"),
+            ("small_company_ro", "Companie mică"),
+            ("small_gardening_ro", "Producător local"),
         ),
         max_length=15,
         null=True,
@@ -46,9 +49,9 @@ class Producer(models.Model):
     )
     toggle = models.CharField(
         choices=(
-            ("gps", "Use GPS"),
-            ("interactive", "Point on Map"),
-            ("manual", "Enter Manually"),
+            ("gps", "Folosește GPS / Use GPS"),
+            ("interactive", "Punct pe hartă / Point on Map"),
+            ("manual", "Introducere manuală / Enter Manually"),
         ),
         max_length=11,
         null=True,
@@ -84,8 +87,10 @@ class Producer(models.Model):
     )
     irrigation_use = models.CharField(
         choices=(
-            ("yes", "Yes"),
-            ("no", "No"),
+            ("yes_en", "Yes"),
+            ("no_en", "No"),
+            ("yes_ro", "Da"),
+            ("no_ro", "Nu"),
         ),
         max_length=3,
         null=True,
@@ -94,8 +99,10 @@ class Producer(models.Model):
     )
     irrigation_interest = models.CharField(
         choices=(
-            ("yes", "Yes"),
-            ("no", "No"),
+            ("yes_en", "Yes"),
+            ("no_en", "No"),
+            ("yes_ro", "Da"),
+            ("no_ro", "Nu"),
         ),
         max_length=3,
         null=True,
@@ -109,8 +116,10 @@ class Producer(models.Model):
     )
     irrigation_quality = models.CharField(
         choices=(
-            ("source", "From source"),
-            ("underground", "Underground water"),
+            ("source_en", "From source"),
+            ("underground_en", "Underground water"),
+            ("source_ro", "Din sursă"),
+            ("underground_ro", "Apă subterană"),
         ),
         max_length=11,
         null=True,
@@ -139,8 +148,10 @@ class Producer(models.Model):
     )
     use = models.CharField(
         choices=(
-            ("homefood", "Homefood"),
-            ("other", "Other"),
+            ("homefood_en", "Homefood"),
+            ("other_en", "Other"),
+            ("homefood_ro", "Uz casnic"),
+            ("other_ro", "Alte utilizări alimentare"),
         ),
         max_length=8,
         null=True,
@@ -149,8 +160,10 @@ class Producer(models.Model):
     )
     fertilizer = models.CharField(
         choices=(
-            ("natural", "Natural"),
-            ("artificial", "Artificial"),
+            ("natural_en", "Natural"),
+            ("artificial_en", "Artificial"),
+            ("natural_ro", "Naturale"),
+            ("artificial_ro", "Artificiale"),
         ),
         max_length=10,
         null=True,

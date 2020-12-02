@@ -9,7 +9,7 @@ define({
     $page.on('change', 'input[class="wq-hide"]', function(evt) {
       var $button = $(evt.target);
 
-      if ($button.val() == "yes") {
+      if ($button.val() == "yes_en" || $button.val() == "yes_ro") {
         $('.wq-no-hide').show();
         $('.wq-yes-hide').hide();
         // $('.wq-no-hide').attr('required', '');
@@ -21,7 +21,7 @@ define({
         // $('.wq-no-hide').removeAttr('data-error');
       }
 
-      if ($button.val() == "renewable" || $button.val() == "both") {
+      if ($button.val() == "renewable_en" || $button.val() == "both_en" || $button.val() == "renewable_ro" || $button.val() == "both_ro") {
         $('.wq-renewable-hide').show();
       } else {
         $('.wq-renewable-hide').hide();

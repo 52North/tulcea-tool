@@ -10,9 +10,12 @@ class Productionservice(models.Model):
     )
     type = models.CharField(
         choices=(
-            ("certificate", "Certificate of producer"),
-            ("small_company", "Small company"),
-            ("small_gardening", "Small gardening"),
+            ("certificate_en", "Certificate of producer"),
+            ("small_company_en", "Small company"),
+            ("small_gardening_en", "Small gardening"),
+            ("certificate_ro", "Deținător de certificat de producător"),
+            ("small_company_ro", "Companie mică"),
+            ("small_gardening_ro", "Producător local"),
         ),
         max_length=15,
         null=True,
@@ -46,9 +49,9 @@ class Productionservice(models.Model):
     )
     toggle = models.CharField(
         choices=(
-            ("gps", "Use GPS"),
-            ("interactive", "Point on Map"),
-            ("manual", "Enter Manually"),
+            ("gps", "Folosește GPS / Use GPS"),
+            ("interactive", "Punct pe hartă / Point on Map"),
+            ("manual", "Introducere manuală / Enter Manually"),
         ),
         max_length=11,
         null=True,
@@ -118,8 +121,10 @@ class Productionservice(models.Model):
     )
     covid_affected = models.CharField(
         choices=(
-            ("yes", "Yes"),
-            ("no", "No"),
+            ("yes_en", "Yes"),
+            ("no_en", "No"),
+            ("yes_ro", "Da"),
+            ("no_ro", "Nu"),
         ),
         max_length=3,
         null=True,
@@ -128,15 +133,24 @@ class Productionservice(models.Model):
     )
     main_effect = models.CharField(
         choices=(
-            ("scaderea_vanzarilor", "Scăderea vânzărilor"),
-            ("scaderea_cifrei", "Scăderea cifrei de afaceri"),
-            ("disponibilizari", "Disponibilizări"),
-            ("intarzieri", "Întârzieri la plata furnizorilor"),
-            ("dificultati", "Dificultăţi la încasare"),
-            ("restrangerea", "Restrângerea activității"),
-            ("suspendarea", "Suspendarea temporară a activităţii"),
-            ("inchiderea", "Închiderea firmei"),
-            ("reprofilare", "Reprofilare"),
+            ("scaderea_vanzarilor_en", "Scăderea vânzărilor"),
+            ("scaderea_cifrei_en", "Scăderea cifrei de afaceri"),
+            ("disponibilizari_en", "Disponibilizări"),
+            ("intarzieri_en", "Întârzieri la plata furnizorilor"),
+            ("dificultati_en", "Dificultăţi la încasare"),
+            ("restrangerea_en", "Restrângerea activității"),
+            ("suspendarea_en", "Suspendarea temporară a activităţii"),
+            ("inchiderea_en", "Închiderea firmei"),
+            ("reprofilare_en", "Reprofilare"),
+            ("scaderea_vanzarilor_ro", "Scăderea vânzărilor"),
+            ("scaderea_cifrei_ro", "Scăderea cifrei de afaceri"),
+            ("disponibilizari_ro", "Disponibilizări"),
+            ("intarzieri_ro", "Întârzieri la plata furnizorilor"),
+            ("dificultati_ro", "Dificultăţi la încasare"),
+            ("restrangerea_ro", "Restrângerea activității"),
+            ("suspendarea_ro", "Suspendarea temporară a activităţii"),
+            ("inchiderea_ro", "Închiderea firmei"),
+            ("reprofilare_ro", "Reprofilare"),
         ),
         max_length=19,
         null=True,
