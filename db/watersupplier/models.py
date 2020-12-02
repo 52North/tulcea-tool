@@ -82,7 +82,7 @@ class Watersupplier(models.Model):
             ("source_ro", "Din sursă"),
             ("underground_ro", "Apă subterană"),
         ),
-        max_length=11,
+        max_length=14,
         null=True,
         blank=True,
         verbose_name="Irrigation supply",
