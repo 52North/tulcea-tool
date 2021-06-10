@@ -69,6 +69,72 @@
               <input id='producer-product' type='text' data-xform-type='string' name='product' value="{{product}}">
               <p class='error producer-product-errors'></p>
             </li>
+            {{#photos}}
+            {{^new_attachment}}{{#id}}
+            <input type="hidden" name="photos[{{@index}}][id]" value="{{id}}">
+            {{/id}}{{/new_attachment}}
+            <li class="ui-field-contain">
+            <div data-role="collapsible" class="section-photos" data-collapsed="false">
+              <h4>Imagine</h4>
+              <ul data-role="listview" data-inset="true">
+                {{^picture.name}}
+                <li class="ui-field-contain">
+                  {{#picture}}
+                  <img src="{{picture}}"
+                       id="producer-photos-{{@index}}-picture-preview">
+                  {{/picture}}
+                  {{^picture}}
+                  <img src="{{rt}}/images/empty.png"
+                       id="producer-photos-{{@index}}-picture-preview">
+                  {{/picture}}
+                  <label for="producer-photos-{{@index}}-picture">Adaugati imagine cu produsele/locatia</label>
+                  {{#native}}
+                  <input type="hidden" name="photos[{{@index}}][picture]" id="producer-photos-{{@index}}-picture"
+                         data-wq-type="file" data-wq-preview="producer-photos-{{@index}}-picture-preview">
+                  <div>
+                    <button type="button" data-inline="true" data-icon="camera" data-mini="true"
+                       data-wq-action="take" data-wq-input="producer-photos-{{@index}}-picture">
+                       Aparat foto
+                    </button>
+                    <button type="button" data-inline="true" data-icon="grid" data-mini="true"
+                       data-wq-action="pick" data-wq-input="producer-photos-{{@index}}-picture">
+                       Galerie
+                    </button>
+                  </div>
+                  {{/native}}
+                  {{^native}}
+                  <input type="file" name="photos[{{@index}}][picture]" id="producer-photos-{{@index}}-picture" accept='image/*'
+                         data-wq-preview="producer-photos-{{@index}}-picture-preview">
+                  {{/native}}
+                  <p class="error producer-photos-{{@index}}-picture-errors"></p>
+                </li>
+                {{/picture.name}}
+                {{#picture.name}}
+                {{#picture}}
+                <li class="ui-field-contain">
+                  <img src="{{image_url}}">
+                  <label for="producer-photos-{{@index}}-picture">Adaugati imagine cu produsele/locatia</label>
+                  <input type="text" id="producer-photos-{{@index}}-picture" disabled
+                      value="{{name}} ({{type}}, {{body.size}} bytes)">
+                  <p class="error producer-photos-{{@index}}-picture-errors"></p>
+                </li>
+                {{/picture}}
+                {{/picture.name}}
+                <li class="section-photos"></li>
+                <li>
+                    <button type="button" data-wq-action="removeattachment" data-wq-section="photos">
+                      Elimina imagine
+                    </button>
+                </li>
+              </ul>
+            </div>
+            </li>
+            {{/photos}}
+            <li>
+              <button type="button" data-wq-action="addattachment" data-wq-section="photos">
+                 {{{i18n_add_picture}}}
+              </button>
+            </li>
             <li data-role="list-divider">2) {{{i18n_contact}}}</li>
             <li class="ui-field-contain">
               <label for='producer-address'>{{{i18n_address}}}</label>

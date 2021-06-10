@@ -1,9 +1,11 @@
 from wq.db import rest
 from .models import Producer
+from .serializers import ProducerSerializer
 
 
 rest.router.register_model(
     Producer,
+    serializer=ProducerSerializer,
     fields="__all__",
     cache="all",
     locate=True,

@@ -110,23 +110,27 @@
               <td>{{{fertilizer_label}}}</td>
             </tr>
             <tr>
-              <th>Storage point</th>
+              <th>{{{i18n_storage_point}}}</th>
               <td>{{{storagepoint_label}}}</td>
             </tr>
             <tr>
-              <th>Sale point</th>
+              <th>{{{i18n_sale_point}}}</th>
               <td>{{{salepoint_label}}}</td>
             </tr>
           </table>
+          <h3>{{{i18n_pictures}}}</h3>
+          {{#photos}}
+          <img src="{{picture}}" alt="Picture of products/location - {{label}}" style="max-width:100%">
+          {{/photos}}
           <div class="ui-grid-a" style="padding-top: 50px">
             <div class="ui-block-a">
               <a href="{{rt}}/producers/" data-role="button" data-icon="bars" data-direction="reverse">
-                Show all producers
+                {{{i18n_show_producers}}}
               </a>
             </div>
             <div class="ui-block-b">
               <a href="{{rt}}/producers/new" data-role="button" data-icon="plus">
-                Add producer
+                {{{i18n_add_producer}}}
               </a>
             </div>
           </div>

@@ -215,3 +215,23 @@ class Producer(models.Model):
     class Meta:
         verbose_name = "producer"
         verbose_name_plural = "producers"
+
+class Photo(models.Model):
+    producer = models.ForeignKey(
+        Producer,
+        on_delete=models.CASCADE,
+        related_name="photos",
+    )
+    picture = models.ImageField(
+        upload_to="producers",
+        null=True,
+        blank=True,
+        verbose_name="Picture of products/location",
+    )
+
+    def __label__(self):
+        return self.picture and self.picture.name
+
+    class Meta:
+        verbose_name = "photo"
+        verbose_name_plural = "photos"

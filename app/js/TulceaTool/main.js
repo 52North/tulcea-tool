@@ -1,6 +1,7 @@
-define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', './hide', './welcome', './i18n', 'wq/locate', './config', 'leaflet.draw', 'leaflet.markercluster'],
-function(app, map, patterns, photos, hide, welcome, i18n, locate, config) {
+define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', './removeattachment', './hide', './welcome', './i18n', 'wq/locate', './config', 'leaflet.draw', 'leaflet.markercluster'],
+function(app, map, patterns, photos, removeattachment, hide, welcome, i18n, locate, config) {
 
+app.use(removeattachment);
 app.use(hide);
 app.use(welcome);
 app.use(i18n);
