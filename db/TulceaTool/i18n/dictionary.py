@@ -198,6 +198,8 @@ dict_ro['i18n_toggle_choices'] = [{'name': "gps", 'label': "Folosește GPS / Use
 dict_ro['i18n_latitude'] = 'Latitudine'
 dict_ro['i18n_longitude'] = 'Longitudine'
 dict_ro['i18n_accuracy'] = 'Acuratețe GPS'
+dict_ro['i18n_google_maps'] = 'Hărți Google'
+dict_ro['i18n_navigate'] = 'Navigați către locația indicată'
 
 dict_en['i18n_general'] = 'General'
 dict_en['i18n_name'] = 'Name'
@@ -219,6 +221,8 @@ dict_en['i18n_toggle_choices'] = [{'name': "gps", 'label': "Folosește GPS / Use
 dict_en['i18n_latitude'] = 'Latitude'
 dict_en['i18n_longitude'] = 'Longitude'
 dict_en['i18n_accuracy'] = 'GPS Accuracy'
+dict_en['i18n_google_maps'] = 'Google Maps'
+dict_en['i18n_navigate'] = 'Navigate to location'
 
 # ----------------------------------------------------------------------
 # Add producer (remaining)
