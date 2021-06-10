@@ -22,6 +22,28 @@ class Producer(models.Model):
         blank=True,
         verbose_name="Type",
     )
+    category = models.CharField(
+        choices=(
+            ("dairy_products_en", "Dairy products"),
+            ("fruits_en", "Fruits"),
+            ("vegetables_en", "Vegetables"),
+            ("meat_en", "Meat"),
+            ("fish_en", "Fish"),
+            ("bakery_products_en", "Bakery products"),
+            ("honey_en", "Honey"),
+            ("dairy_products_ro", "Lactate"),
+            ("fruits_ro", "Fructe"),
+            ("vegetables_ro", "Legume"),
+            ("meat_ro", "Carne"),
+            ("fish_ro", "Peste"),
+            ("bakery_products_ro", "Produse panificatie"),
+            ("honey_ro", "Miere"),
+        ),
+        max_length=18,
+        null=True,
+        blank=True,
+        verbose_name="Category",
+    )
     product = models.TextField(
         null=True,
         blank=True,

@@ -53,6 +53,18 @@
               <p class='error producer-type-errors'></p>
             </li>
             <li class="ui-field-contain">
+              <label for='producer-category'>{{{i18n_category}}}</label>
+              <select id='producer-category' data-xform-type='select one' name='category'>
+                <option value="">{{{i18n_select}}}</option>
+                {{#i18n_category_choices}}
+                <option value="{{name}}"{{#selected}} selected{{/selected}}>
+                  {{label}}
+                </option>
+                {{/i18n_category_choices}}
+              </select>
+              <p class='error producer-category-errors'></p>
+            </li>
+            <li class="ui-field-contain">
               <label for='producer-product'>{{{i18n_products}}}</label>
               <input id='producer-product' type='text' data-xform-type='string' name='product' value="{{product}}">
               <p class='error producer-product-errors'></p>
