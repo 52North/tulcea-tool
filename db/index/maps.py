@@ -10,6 +10,9 @@ basemaps = [
     }
 ];
 
+def choose_icon(feature_properties):
+    return 'producer'
+
 index_map = [{
     'autoZoom' : False,
     'layers': [{
@@ -27,11 +30,11 @@ index_map = [{
         'icon' : 'storagepoint',
     },
     {
-        'name': '<span style="padding-right: 5px;">Producătorilor</span><img style="height: 20px;" src="images/producer.png">',
+        'name': '<span style="padding-right: 5px;">Producătorilor</span><img style="height: 20px; padding-right: 5px" src="images/producer.png"><img style="height: 20px; padding-right: 5px" src="images/milk-bottle2.png"><img style="height: 20px; padding-right: 5px" src="images/group-of-fruits.png"><img style="height: 20px; padding-right: 5px" src="images/group-of-vegetables.png"><img style="height: 20px; padding-right: 5px" src="images/steak-rare.png"><img style="height: 20px; padding-right: 5px" src="images/fish.png"><img style="height: 20px; padding-right: 5px" src="images/bakery.png"><img style="height: 20px;" src="images/honey.png">',
         'type': 'geojson',
         'url': 'producers.geojson',
         'popup': 'producer',
-        'icon' : 'producer',
+        'icon' : '{{#category_dairy_products}}milk-bottle2{{/category_dairy_products}}{{#category_fruits}}group-of-fruits{{/category_fruits}}{{#category_vegetables}}group-of-vegetables{{/category_vegetables}}{{#category_meat}}steak-rare{{/category_meat}}{{#category_fish}}fish{{/category_fish}}{{#category_bakery_products}}bakery{{/category_bakery_products}}{{#category_honey}}honey{{/category_honey}}{{#category_none}}producer{{/category_none}}',
     },
     {
         'name': '<span style="padding-right: 5px;">Furnizorilor de apă</span><img style="height: 20px;" src="images/watersupplier.png">',
