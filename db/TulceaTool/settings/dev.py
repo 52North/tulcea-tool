@@ -12,7 +12,7 @@ DEBUG = True
 # wq: Determine if we are running off django's testing server
 DEBUG_WITH_RUNSERVER = 'manage.py' in sys.argv[0]
 
-ALLOWED_HOSTS = ["creatinginterfaces.demo.52north.org"]
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', 'creatinginterfaces.demo.52north.org')]
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -20,11 +20,11 @@ ALLOWED_HOSTS = ["creatinginterfaces.demo.52north.org"]
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'tulceatool',
-        'USER': 'tulceatool',
+        'NAME': os.environ.get('TULCEA_DB', 'tulceatool'),
+        'USER': os.environ.get('TULCEA_DB_USER', 'tulceatool'),
         'PASSWORD': os.environ.get('TULCEA_DB_PW'),
-        'HOST': 'db-tulcea',
-        'PORT': '',
+        'HOST': os.environ.get('TULCEA_DB_HOST', 'db-tulcea'),
+        'PORT': os.environ.get('TULCEA_DB_PORT', '5432'),
     }
 }
 
