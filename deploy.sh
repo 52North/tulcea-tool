@@ -15,12 +15,12 @@ db/manage.py dump_config --format amd > app/js/data/config.js
 # Build javascript with wq.app
 cd app;
 wq icons;
-wq build $1;
+wq build "$1";
 
 # Force important files through any unwanted server caching
 cd ../;
-sed -i "s/TulceaTool.js/TulceaTool.js?v="$1"/" htdocs-build/TulceaTool.appcache
-sed -i "s/TulceaTool.css/TulceaTool.css?v="$1"/" htdocs-build/TulceaTool.appcache
+sed -i "s/TulceaTool.js/TulceaTool.js?v=$1/" htdocs-build/TulceaTool.appcache
+sed -i "s/TulceaTool.css/TulceaTool.css?v=$1/" htdocs-build/TulceaTool.appcache
 
 # Preserve Django's static files (e.g. admin)
 if [ -d htdocs/static ]; then
