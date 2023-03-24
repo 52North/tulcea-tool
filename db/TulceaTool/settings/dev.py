@@ -22,7 +22,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': os.environ.get('TULCEA_DB', 'tulceatool'),
         'USER': os.environ.get('TULCEA_DB_USER', 'tulceatool'),
-        'PASSWORD': os.environ.get('TULCEA_DB_PW'),
+        'PASSWORD': os.environ.get('TULCEA_DB_PW', 'tulceatool'),
         'HOST': os.environ.get('TULCEA_DB_HOST', 'db-tulcea'),
         'PORT': os.environ.get('TULCEA_DB_PORT', '5432'),
     }
